@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data</title>
+    <link rel="stylesheet" href="../view/insert.css"> <!-- conn to css -->
+</head>
+<body>
+    <div class="main-content">
+        <div class="header">
+            <h1>+ Create New Data</h1>
+        </div>
+
+        <form action=""method="POST" enctype="multipart/form-data" >
+        <div class="input-content" >
+            <label for="nrp">NRP :</label>
+            <input type="text" name="nrp" id="nrp" required autocomplete="off" placeholder="Masukan nomor registrasi pusat">
+        </div>
+        <div class="input-content" >
+            <label for="nama">Nama :</label>
+            <input type="text" name="nama" id="nama" required autocomplete="off" placeholder="Masukan Nama" >  <!-- Required agar tidak ada field yang kosong/wajib diisi saat input data, fitur ini bawaan dari html versi 5 -->
+        </div>
+        <div class="input-content">
+            <label for="email">Email :</label>
+            <input type="text" name="email" id="email" required autocomplete="off" placeholder="Masukan Email">
+        </div>
+        <div class="input-content">
+            <label for="jurusan">Jurusan :</label>
+            <input type="text" name="jurusan" id="jurusan" required autocomplete="off" placeholder="Masukan Jurusan">
+        </div>
+        <!-- set Upload feature here  -->
+        <div class="input-content">
+            <label for="gambar">Gambar :</label>
+            <input type="file" name="gambar" id="gambar" required >
+        </div>
+        <!-- end feature -->    
+        <button type="submit" name="submit">Tambah Data</button>
+
+        </form>
+
+    </div>
+</body>
+</html>

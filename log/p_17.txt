@@ -1,0 +1,37 @@
+|| YANG BARU DIPELAJARI ||
+dari pertemuan 17 adalah :    ABOUT REMEMBER ME Function 
+
+    Ternyata materi terkait cookie (data user disimpan di sisi browser) tanpa sadar telah dipelajari di pertemuan sebelumnya yaitu p_16
+    Dimana di pertemuan itu letak cookie nya adalah di segi browser, yaitu dari phpsessid yang dimana itu merupakan kunci/key yang dikirim dari server dan diarahkan ke browser agar disimpan
+        dan akan dikirimkan lagi si phpsessid ini di request selanjutnya ke domain yang sama, dan akan di cek oleh fungsi session_start() di server-side, untuk menentukan apakah user yang request punya data yang tersimpan di server (tmp folder dan akan pake $_SESSION) atau tidak (create tmp baru dan gaada history yang ter-log)
+    Namun di pertemuan itu keterkaitan cookie nya sangat sedikit, dimana data yang merupakan cookie ini (data in browser storage) hanya berupa phpsessid alias browser hanya nyimpan data berupa kunci untuk buka data sebenar di sisi server (data user disimpan di server, browser hanya pegang key untuk open tmp di server-side atau akan create bila tidak ada)
+    Barulah di pertemuan ini akan membahas terkait penggunaan cookie yang benar dan efisien dibanding hanya digunakan sebagai saver key phpsessid
+    yaitu memodif cookie agar bisa menyimpan data yang seharusnya disimpan di sisi server, jadi misal ada data keranjang berisi 5 item maka jika memodif cookie menjadi hal ini maka 5 item cart itu akan disimpan di browser dan server akan memeriksa dan menyimpannya ke dalam $_COOKIE (khusus handle data cookie)
+        beda apabila condong pakai fitur session saja seperti di p_16, dimana data berupa 5 item in cart itu akan disimpan di sisi server di folder tmp, sedangkan browser hanya pegang key untuk verif agar bisa buka data yang disimpan di server
+    maka sederhananya fitur cookie ini "membalikannya"
+    yang dimana fiturnya sering kita kenal sebagai "remember me"
+    
+
+    untuk data user yang menggunakan mekanisme SESSION -> verif use "key" like phpsessid from browser sender to open tmp (contain real data [data disimpan di server browser hanya verifikator])
+        dan saat data sudah berhasil dibuka alias data di tmp sudah open, maka data bisa dikelola dengan cara data itu disimpan di $_SESSION yang sudah di pindah otomatis oleh sistem php 
+            jadi sebagai programmer, mengelola data dengan mekanisme session seperti checking apakah session telah dibuat maka menggunakan variabel ini karena data user asli yang disimpan di server dengan metode ini ada di folder tmp yang dimana dipindahkan ke $_SESSION 
+
+    untuk data user yang menggunakan mekanisme COOKIE "Remember Me" -> verif use "data", yang disimpan oleh browser itu sendiri (contain real data [data disimpan di browser client, server hanya menerimanya saat request dan menyimpannya untuk dikelola, masih mirip seperti SESSION cuman beda di sisi penyimpanan terutamanya])
+        dan saat data sudah berhasil dikirim ke server, maka data bisa dikelola dengan cara data itu disimpan di $_COOKIE yang sudah di pindah otomatis oleh sistem php, dimana dari browser client ke sisi server untuk dikelola
+            jadi sebagai programmer, mengelola data dengan mekanisme COOKIE remember me seperti checking apakah browser telah mengirim data cookie ini atau belum ke server karena data sebenar ada di browser client, dan menggunakan variabel $_COOKIE untuk mengelola data tersebut, dimana data sebenar berupa cookie yang berasal dari client itu akan disimpan otomatis oleh sistem php ke dalam $_COOKIE, jadi server tidak ada yang namanya menyimpan datanya di folder tmp karena data sebenar dipegang user dan server hanya akan menyimpannya saat dikirim ke $_COOKIE
+                Jadi intinya data bukan di server (seperti tmp di session) tapi di browser, dan server hanya sebagai penerimanya dan pengelolanya, yang dimana data itu yang dikirim akan disimpan di $_COOKIE not $_SESSION
+
+
+    Jadi untuk fitur remember me di pertemuan ini yaitu menggunakan input type -> checkbox, dimana logic flow nya -> jika checkbox diisi/checklist maka jalankan mekanisme remember me[cookie lanjutan/advance [real data on browser and use $_COOKIE for manage data]], bila tidak maka gunakan mekanisme session [real data on server and use $_SESSION for manage data] 
+    dan untuk fitur remember me ini karena root page nya ada di login sebagai media utama dan gateway ke page index, maka di fitur ini dibuat di halaman login ini
+
+    Dan untuk disclaimer:
+    -> SESSION atau sesi (periode aktivitas browser seperti "sesi penerimaan murid ke 3 akan dimulai tanggal 2-10) milik browser seara defaullt adalah dari browser dibuka dan ditutup, alasan utamanya karena ke efisiensian dan keamanan
+    -> Dan juga untuk COOKIE (data kecil di browser client yang berisi data ke domain tertentu seperti phpsessid sbg key session atau cookie biasa dengan key/value) secara default juga mengikuti aturan browser, yaitu bila tidak di set timernya di setcookie(), jadi bila tak di-set ia akan mengikuti periode session yaitu saat browser nyala-tutup, yang disebut dengan session cookie (karena cookie nya memiliki time yang sama dengan session)
+    -> Dan hanya cookie lah yang bisa di set timer nya, yaitu seberapa lama cookie itu akan bertahan di browser walau device mati atau browser close, kenapa? karena emang lebih optimal dan efisien bila yang bisa di set timer adalah cookie yang ada di browser, bukan session di server dikarenakan tidak cocok, dikarenakan bila session bisa di set bertahan lama itu tidak ngaruh karena bila browser tidak ada cookienya pun tidak bisa mengakses data sessionnya sehingga percuma saja, dan juga session sudah punya timer expired sendiri di tmp yang di manage oleh sistem bernama "garbage collector" 
+    
+
+Function :
+    - hash() -> Digunakan untuk mengacak/hashing sebuah string menjadi kode berbentuk acak seperti enkripsi (sama seperti password hash yang dimana string normal akan diacak sesuai algoritma yang dipilih developer)
+    
+    

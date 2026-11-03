@@ -1,0 +1,46 @@
+|| YANG BARU DIPELAJARI ||
+dari pertemuan 13 adalah :
+    --> Form merupakan satu satu nya elemen dalam website yang dimana bisa membuat Browser mengirim data (bukan request tapi benar benar mengirim/sending) ke server (jadi ini tuh merupakan satu satunya cara si browser bisa send data to server (berupa berkas terutama file gambar))
+        Dimana dalam form ini otomatis memiliki encoding khusus agar data yang dikirim bisa diproses dan dipahami oleh si penerima (dalam hal ini adalah server)
+        Dan form secara default *ternyata sudah memiliki encoding type/enctype sendiri untuk memproses data yang khusus yang hanya untuk teks/string (jadi sudah ada secara default tanpa perlu ditulis)
+        Jadi otomatis dengan enctype default seperti itu, tidak bisa digunakan untuk mengirim file/berkas seperti gambar, yang dimana gambar merupakan kumpulan binary code, dan enctype default hanya dapat memproses string/teks jadi binary tak termasuk yang intinya ya tidak bisa (jadi kita tinggal ubah aja enctype default itu saja agar jadi bisa memproses binary)
+    --> Terkait hal terbaru mengenai MySQL, dimana saya bisa memasukan data yaitu file/berkas ini langsung ke dalam database mysql ini yang dimana berkas/filenya akan berbentuk binary/biner saat masuk dan tersimpan ke database (karena ya file seperti gambar emang source nya berbentuk binary)
+            Dimana tipe data dari mysql khusus untuk hal ini (yaitu masukin serta menyimpan data berbentuk biner ke dalam mysql) bernama "BLOB", atau Binary Large Objek. (Tipe data dari Mysql yang khusus untuk menyimpan data berbentuk biner/binary di dalamnya).
+
+            Yang akan dipelajari dalam materi P_13 ini: 
+            -> <input type='file' > khusus for file dalam input type 
+            -> enctype in form of website khusus handling file (nge-switch yang default agar bisa proses binary code dari berkas/file yang dikirim)
+            -> $_FILES -> superglobals khusus buat menangani file 
+            -> fungsi move_uploaded_file untuk memindahkan gambar yang sebenar agar tidak masuk kedalam mysql DB
+            untuk enctype yang digunakan untuk menggantikan default enctype agar form bisa mengirim multi type data alias bisa memproses berkas yang sourcecodenya berupa binary ataupun bisa proses string juga adalah : multipart/form-data
+
+
+
+
+    Mekanisme Upload ini :
+        Mekanisme dari fitur Upload dari aplikasi website ini yaitu adalah sebagai berikut :
+            - Gambar adalah data yang sebenarnya berbentuk biner, jadi cara sebelumnya yaitu penangkapan data string itu harus dengan file yang sudah ada dalam program !
+                Jadi user tidak bisa mengupload gambar dan akan tampil di page web bila gambar yang diupload user tak ada di dalam sistem web yang dibuat
+            - Jadi untuk menangani ini maka dalam form dibedakan data string asli dan data binary yaitu si file ini, oleh karena itu biar sistem dan interpreter bisa memilah dan mendeteksi data yang terkirim maka gunakan enctype multi part data (enctype yang umum untuk semua jenis data)
+            - Dan juga data yang diupload, itu akan masuk ke dalam folder temp karena alasan keamanan sistem, barulah gunakan fungsi move_uploaded_file untuk alokasi di direktori yang asli
+            - Dan untuk data yang disimpan di dalam database mysql adalah data yang hanya berupa string nama gambarnya saja, karena walau ada tipe data BLOB (khusus binary) dalam mysql, tapi itu tidak efisien karena menjadikan database berat karena ukuran file terutama gambar itu lebih berat dari yang lain
+            - Jadi fungsi upload sebagai pemeran utama ini me-return 2 hasil jika "true" :
+                    1. Upload gambar ke dir berhasil
+                    2. Mengirim string dari nama gambar untuk masuk ke database
+            - False setara NULL karena sama sama merupakan kondisi "kegagalan"
+            - return false di dalam if itu == stop proses, karena ada kata kunci return dan dianggap program selesai, dan yang direturn false berarti menandakan bila if itu jalan dan return false terjalan serta fungsi utama berhenti dan menerima return false itu maka ada kesalahan/error
+            
+            Lalu apa alasannya perlu memasukan string nama gambar ke dalam database juga?
+                Adalah karena untuk identifikasi saat proses query ke halaman website (gampangnya biar bisa diselect dan ditampilin ke halaman web yang dilihat client/user)
+
+    Fungsi built-in (&sedikit teori) yang baru dipelajari :
+    1. end() -> untuk navigasi pointer array ke item paling akhir dari list (ada kembarannya kaya reset, prev, next dst, intinya ini tuh fungsi untuk gerakin data array)
+    2. explode() -> untuk memecah/mengurai data menjadi bagian" dengan parameter delimitter/pemisah & argue/nilai yang mau dipisah
+    3. in_array() -> untuk mengecek data yang ada di dalam array (jarum dan stack jerami), sesuai namanya yaitu untuk mencari data dalam array stack
+    4. strtolower() (sebenernya udah tahu tapi ini buat log aja) -> untuk membuat teks string yang dikirim menjadi kecil semua(low sesuai namanya) saat masuk ke fungsi ini
+    - 5. ./titik -> sebagai operasi penggabungan/contentation data, misal ada variabel berisi string digabung dengan variabel yang berisi integer maka akan menghasilkan data gabungan berupa string dan integer dalam 1 row
+            serta operasi ini bisa dikombinasikan dengan operasi lain seperi .=/.+/.- dsb, yang intinya memiliki maksud yaitu "gabungkan ini", misal .= maka "gabungkan ini "dengan (refers to =)"" atau .= yang maksud nya "tambahkan ini dengan"
+                intinya . adalah operasi untuk nge-"FUSI" sebuah data dalam program bila ingin menggabungkan sesuatu, sesuai definisinya yaitu contentation assignment/operasi penggabungan (intinya untuk gabungin, dan gabungin aja alias just fussion assignment)
+    6. uniqid() -> adalah fungsi yang menghasilkan nilai random jika dipanggil yang dimana bekerja berdasarkan waktu (setiap saat akan menghasilkan nilai berbeda secara real-time)
+
+

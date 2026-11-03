@@ -1,0 +1,1 @@
+                             name="jenis_kelamin" id="jenisK" value = "<?= $mhs['jenis_kelamin'];?>"

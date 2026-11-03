@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+.main-wrapper{
+    padding : 24px;
+}
+
+.main-content{
+    background: #FFFEFE;
+    border: 1px solid rgba(26, 26, 26, 0.122);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 30px;
+    padding : 32px;
+    min-height: 600px;
+    height: auto;
+}
+.main-content .header{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding : 11px;
+    border-bottom: 1px solid rgba(32, 32, 33, 0.147);
+    margin-bottom: 25px;
+}
+.header .header-text{
+    color:  rgba(6, 6, 6, 0.737) ;
+    position: relative;
+    top : 10px;
+}
+.wrapper-cancel-1{
+    padding: 9px;
+    border: 1px solid rgba(42, 45, 46, 0.496);
+    border-radius: 8px;
+}
+.cancel-1 a{
+    text-decoration: none;
+    color : rgba(0, 0, 0, 0.685);
+    font-size: 13px;
+}
+.form-content{
+    padding: 9px;
+}
+.main-content .input-content{
+    display: flex;
+    flex-direction: column;
+    padding: 7px;
+    color: rgba(39, 40, 41, 0.588);
+    margin-bottom: 10px;
+}
+.main-content .input-content label{
+    color: rgba(39, 40, 41, 0.588);
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.main-content .input-content input{
+    border-radius: 8px;
+    padding: 9px;
+    border: 1px solid rgba(33, 34, 35, 0.211);
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+/* set focus effect for input box */
+.main-content .input-content input:focus{
+    transform: translateY(1.4px);
+    transition: transform, 0.4s ease-out;
+}
+
+
+.cancel-2 a{
+    text-decoration: none;
+    color : rgba(0, 0, 0, 0.685);
+    font-size: 13px;
+    width : 14%;
+}
+.cancel-2{
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid rgba(42, 45, 46, 0.248);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7%;
+    position: relative;
+    top : 6px;
+    font-weight:  600;
+}
+
+.wrapper-button{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap : 1rem;
+    padding: 9px;;
+}
+.main-content button{
+    width : 7%;
+    padding : 5px;
+    border-radius: 9px;
+    border:  none;
+    outline: none;
+    font-weight:  600;
+    color: white;
+    background: #004dff;
+    margin-top: 12px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+/* set hover effect for button bellow */
+.main-content button:hover{
+    transform: translateY(1px);
+    transition: transform, 0.3s ease-in-out;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.151);
+}
+.cancel-2 a:hover{
+    transform: translateY(1px);
+    transition: transform, 0.3s ease-in-out;
+    box-shadow: 0px 2px 2px 1px rgba(0, 0, 0, 0.151);   
+}
+
+/* set choosen file section bellow */
+.input-content input::file-selector-button{
+    border-radius: 2px;
+    border: none;
+}

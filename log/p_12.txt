@@ -1,0 +1,19 @@
+|| YANG BARU DIPELAJARI ||
+dari pertemuan 12 adalah :
+    -> Atribut HTML PlaceHolder untuk membuat placeholder/replace isi dari input sebelum dimasukan data di dalamnya [need input untuk teks placeholder]
+    -> Atribut HTML autofocus yang bernilai default boolean bila dideklarasikan [tak perlu value], untuk mengautofocuskan input saat page baru di load
+    -> Atribut HTML autocomplete, untuk autocomplete kan input, ngasih suggestion, bernilai dinamis
+        intinya buat autocomplete input [auto ngisi sendiri/auto saran], wajib kasih value.
+        Untuk nonaktifin tinggal kasih autocomplete="off" agar suggesti/autocomplete = mati/off
+
+
+    About SQL :
+        Mengenai sql 
+            -> Pengenalan operator baru yaitu LIKE / Seperti di sql dimana memiliki wildcard(%) didalamnya, operator ini untuk mencari/query data yang memiliki *POLA yang mirip/seperti
+                    [beda dengan '=' dimana data harus benar benar 'sama' (sesuai operator) dan operator ini biasa digunakan dalam fungsi pencarian data]
+            -> Pengenalan sintaks SQL yaitu pengurutan data dengan ORDER BY, mengurutkan data dari terbaru sampai terlama (ASC) atau kebalikannya (DESC) => ORDER BY id ASC/DESC
+            -> Pengenalan bahwa sintaks sql/bahasa sql ternyata bisa menggunakan Gerbang Logika di dalam penulisannya [query] yang berguna untuk memanipulasi data secara lebih spesifik
+            -> untuk penulisan gerbang logika disetiap pergantian batas data, dan untuk peletakan WHERE (identifier spesifikal data) dibuat 1 saja karena gerbang logika sudah menghubungkannya dengan OR/Atau dan AND/Dan
+                    (Misal : ambil data dari mahasiswa yang namanya seperti xx ATAU nrpnya seperti xx dst, bukan malah ambil data dari mahasiswa yang namanya xx atau ambil data dari mahasiswa yang nrp nya xx Dan ambil data dari mahasiswa yang namanya xx atau yang nrp nya xx)
+                        [cukup where/yang 1 kali dan sintaks buat fetch yaitu select nya 1 kali juga, based on rule of sql]
+

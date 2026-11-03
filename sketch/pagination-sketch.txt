@@ -1,0 +1,15 @@
+|| Sketch :
+
+|| Work Flow => 
+Task : Restyle the index page and other page --> on process
+
+    -> merge komponen search dan button create new ke dalam main-table container
+        ==> div new add and merge search component and button create --> D
+            ==> add new status -> jumlah siswa n simple logo --> D
+    -> fixed position properties for header konten on main container [right side] --> D
+
+    -> gabung halaman tambah dan update data ke satu model index yang sama
+        -> Component has Ready to `use`
+    -> buat fitur navigasi saat tiba di halaman, ada identifikasi button menyala/berwarna
+        ==> via get URL or other 
+            -> JS Option

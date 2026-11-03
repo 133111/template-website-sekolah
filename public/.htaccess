@@ -1,0 +1,10 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#redirect to index.php as a entry
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+php_flag display_errors On
+php_value error_reporting 32767

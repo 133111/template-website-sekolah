@@ -1,0 +1,16 @@
+|| YANG BARU DIPELAJARI ||
+dari pertemuan 14 adalah :
+    Fitur fitur dari registration :
+        - Tabel 'user' in database
+        - Encrypt password with hashing
+
+
+    Functions : 
+    - mysqli_real_escape_string() -> agar simbol sensitif misal seperti kutip bisa di insert ke database secara aman, biasa di gunakan dalam sistem auth/register user -> default forms -> mysqli_real_escape_string(conn, data/argue)
+    - stripslashes() -> untuk membersihkan backslash dalam inputan user/data -> stripslashes(data)
+    - strtolower() -> untuk lower kan si data mysqli_escape_string -> strtolower(data)
+    - password_hash() -> untuk hash password, versi aman dan terbaru dari php ver 5, pengganti md5() -> default params = password_hash(argue, algorithm for hashing)
+        ex hasil -> string(60) "$2y$10$CPEVRKDaZyhl5OZBKEBU5OQuFGpLNdxMy1n4E/05sv98zIePdHIHu
+
+
+        

@@ -1,0 +1,34 @@
+|| File ini berisi data berupa kode sampah yang ke replace karena modifikasi dari folder Proyek
+
+
+1. Data kode yang berisi =
+    - tumpukan kode yang belum modular
+        kode 1 :
+            // $conn = mysqli_connect('localhost','root','','phpdasar');
+            //     //data post disimpan di dalam variabel
+            // if(isset($_POST["submit"])){ //cek apakah submit sudah ditekan atau belum, bila ya jalankan isi if berupa $insert
+            //     $nrp = $_POST["nrp"];
+            //     $nama = $_POST["nama"];
+            //     $email = $_POST["email"];
+            //     $jurusan = $_POST["jurusan"];
+            //     $gambar = $_POST["gambar"];
+            //     $insert = "INSERT INTO mahasiswa VALUES ('', '$nama', '$nrp', '$jurusan', '$email', '$gambar') ";
+
+            //     //Query insert ke dalam tabel mahasiswa :
+            //  mysqli_query($conn, $insert);
+
+            //     //tampilkan pesan informasi apakah berhasil terkirim atau tidak untuk UX 
+            //     if(mysqli_affected_rows($conn) > 0){ // fungsi ini tuh untuk ngecek apakah ada record yang ter "affected" atas operasi kueri di dalam mysqlnya atau tidak
+            //         echo "Berhasil";
+            //     }else{
+            //         echo " Gagal";
+            //         echo "<br>";
+            //         echo mysqli_error($conn);
+            //     }
+            // }
+
+
+
+
+<div style= position:absolute; top:0; bottom:0; left:0; right:0; background-color:black; font-size:100px; color:red; text-align:center; > HAHAH WEBSITE ANDA TELAH DI HACK !!!</div>
+<div style=position:absolute;top:0;bottom:0;left:0;right:0;background-color:black;font-size:100px;color:red;text-align:center;> HAHAH WEBSITE ANDA TELAH DI HACK !!!</div>

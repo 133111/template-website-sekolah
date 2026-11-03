@@ -1,0 +1,125 @@
+:root{
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container2 .header{
+    text-align: center;
+    color: rgba(6, 6, 6, 0.759);
+    margin-bottom: 11px;
+    padding : 11px;
+    border-bottom : 1px solid rgba(44, 40, 43, 0.086);
+}
+.like-1{
+    padding: 7px;
+    display: flex;
+    justify-content: start;
+}
+.container2{
+    background  : #FFFEFE;
+    margin-top : 14px;
+    margin-left: 20px;
+    margin-right: 12px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding: 20px;
+    border-radius: 15px;
+    min-height: 300px;
+    border : 1px solid rgba(37, 37, 38, 0.11)
+}
+
+
+.container2 .input-content{
+    display: flex;
+    flex-direction: column;
+    padding: 1px;
+    color: rgb(0, 0, 0);      
+}
+
+.container2 .input-content input{
+    height: 40px;
+    border-radius: 8px;
+    padding: 11px;
+    border: none;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    overflow: hidden;
+    border : 1px solid rgba(41, 41, 44, 0.105);
+    margin-top: 2px;
+}
+
+.container2 .input-content label{
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 8px;
+    opacity: 0.5;
+    color: #1002499c;
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.container2 .input-content img{
+    width: 125px;
+    height: 125px;
+    position: relative;
+    border : 2px solid rgba(65, 55, 65, 0.23);
+    left : 6%;
+    bottom : 30px;
+    border-radius: 75px;
+    object-fit: cover;
+    z-index: 1;
+}
+.pict-svg{
+    position: relative;
+}
+.pict-svg svg{
+    z-index: 5;
+}
+
+/* set focus effect for input box */
+.container2 .input-content input:focus{
+    transform: translateY(2px);
+    transition: transform, 0.3s ease-in-out;
+}
+.button-submit-update{
+    display: flex;
+    justify-content: end;
+    gap: 11px;
+}
+.button-submit-update a{
+    padding: 8px;
+    font-weight: 600;
+    margin-top: 12px;
+    height: 6%;
+    width: 10%;
+    border-radius: 8px;
+    border : none;
+    outline: none;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+.button-submit-update button{
+    padding: 8px;
+    font-weight: 600;
+    margin-top: 12px;
+    height: 6%;
+    width: 10%;
+    border-radius: 8px;
+    border : none;
+    outline: none;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+
+/* hover effect for button*/
+.container2 button:hover{
+    transform: translateY(1px);
+    box-shadow: 1px 1px 2px 1px rgba(19, 19, 19, 0.275);
+}
+.container2 a:hover{
+    transform: translateY(1px);
+    box-shadow: 1px 1px 2px 1px rgba(19, 19, 19, 0.275);
+}

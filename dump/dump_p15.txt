@@ -1,0 +1,87 @@
+<?php
+require 'functions.php';
+if(isset($_POST["login"])){
+    //get data 
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    $email = $_POST['email'];
+
+    //checking section by 'if' paralel
+    //username & email get :
+    $result = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
+    $result2 = mysqli_query($conn, "SELECT * FROM users WHERE email = '$email'");
+
+    //username & email check
+    if(mysqli_num_rows($result) === 1){
+        //check email 
+         if(mysqli_num_rows($result2) === 1){
+            //check pass 
+            $row = mysqli_fetch_assoc($result);
+            if(password_verify($password, $row['password'])){
+                echo"
+                <script>
+                    alert('Login Berhasil');
+                    document.location.href='index.php';
+                </script>
+                ";
+            }else{
+                echo"
+                <script>
+                    alert('Password salah, Login Gagal');
+                </script>
+                ";
+            }
+        }else{
+            echo"
+            <script>
+                alert('Email salah, Login Gagal');
+            </script>
+            ";
+        }
+    }else{
+        echo"
+        <script>
+            alert('Username salah, Login Gagal');
+        </script>
+        ";
+    }
+
+}
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Login</title>
+    <link rel="stylesheet" href="view/login.css" >
+</head>
+<body>
+    <h1>Selamat Datang</h1>
+    <h2>Silahkan Login</h2>
+<form action="" method="POST">
+    <div class="main-form"> 
+        <ul>
+            <li>
+                <label for="username">Username :</label>
+                <input type="text" id="username" autocomplete="off" autofocus placeholder="Masukan Username anda" name="username">
+            </li>
+            <li>
+                <label for="email">Email :</label>
+                <input type="email" id="email" autocomplete="off" placeholder="Masukan Email anda" name="email">
+            </li>
+            <li>
+                <label for="password">Password :</label>
+                <input type="text" id="password" autocomplete="off" placeholder="Masukan Password anda" name="password">
+            </li>
+            <li>
+                <button type="submit" name="login">Login</button>
+            </li>
+        </ul>
+    </div>
+</form>
+    
+</body>
+</html>

@@ -1,0 +1,12 @@
+|| YANG BARU DIPELAJARI ||
+dari pertemuan 10 adalah :
+    -> Cara membuat notif confirm sebelum masuk ke halaman dengan JS while onclick :
+     onclick = "return confirm('Apakah Anda Yakin?') => artinya saat di klik/onclick akan terjadi apa? yaitu return toggle confirm
+
+    -> Cara membuat toggle Alert dan redirect dengan JS saat submit 
+        <script>
+        alert ('Data Berhasil Dihapus'); //
+        document.location.href = 'indexx.php';
+        </script>";
+    
+    -> atribut html baru yaitu 'required' agar user/client gabisa submit dnegan form kosong, nanti ada notif peringatan field wajib diisi

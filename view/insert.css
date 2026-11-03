@@ -1,0 +1,703 @@
+:root {
+    --neo-black: #08090B;
+    --neo-white: #FFFFFF;
+    --neo-canvas: #F8F9FA;
+    --neo-yellow: #FFE600;
+    --neo-yellow-warm: #FDE047;
+    --neo-green: #4ADE80;
+    --neo-green-neon: #00F59B;
+    --neo-green-emerald: #10B981;
+    --neo-coral: #FF4D6D;
+    --neo-red: #EF4444;
+    --neo-blue: #38BDF8;
+    --neo-purple: #A78BFA;
+    --neo-gray: #ECEFF1;
+    --neo-gray-border: #D1D5DB;
+    --neo-shadow-xs: 1px 1px 0px #08090B;
+    --neo-shadow-sm: 2px 2px 0px #08090B;
+    --neo-shadow: 3px 3px 0px #08090B;
+    --neo-shadow-lg: 4px 5px 0px #08090B;
+    --neo-shadow-xl: 6px 6px 0px #08090B;
+    --font-main: "Space Grotesk", "Plus Jakarta Sans", "Sora", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+body {
+    background-color: var(--neo-canvas);
+    color: var(--neo-black);
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   MAIN CONTAINER & CARD (NEOBRUTALISM)
+   ========================================================================== */
+.main-wrapper {
+    width: 100%;
+    padding: 0;
+}
+
+.main-content {
+    width: 95%;
+    max-width: 1050px;
+    margin: 20px auto 40px auto;
+    background: var(--neo-white);
+    border: 2px solid var(--neo-black);
+    box-shadow: var(--neo-shadow-lg);
+    border-radius: 16px;
+    padding: 28px 32px;
+    position: relative;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+/* Header Section */
+.border-bottom-line {
+    border-bottom: 2px solid var(--neo-black);
+    padding-bottom: 18px;
+    margin-bottom: 24px;
+}
+
+.main-content .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+/*modals below [neo modals]*/
+/* =========================================
+   NEOBRUTALISM MODAL NOTIFICATION
+   ========================================= */
+.neo-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 9, 11, 0.45);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease-in-out;
+}
+
+.neo-modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.neo-modal-card {
+    background: #FFFEFE;
+    border: 3px solid #08090B;
+    box-shadow: 6px 8px #08090B;
+    border-radius: 18px;
+    width: 400px;
+    padding: 28px 24px 22px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transform: translateY(30px) scale(0.95);
+    opacity: 0;
+    transition: transform 0.35s ease-out, opacity 0.3s ease-out;
+}
+
+.neo-modal-overlay.active .neo-modal-card {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
+
+.neo-modal-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.neo-modal-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    border: 2px solid #08090B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.neo-modal-icon.success {
+    background: #D1FAE5;
+}
+.neo-modal-icon.success svg {
+    color: #059669;
+}
+
+.neo-modal-icon.error {
+    background: #FEE2E2;
+}
+.neo-modal-icon.error svg {
+    color: #DC2626;
+}
+
+.neo-modal-icon.warning {
+    background: #FEF3C7;
+}
+.neo-modal-icon.warning svg {
+    color: #D97706;
+}
+
+.neo-modal-icon.info {
+    background: #DBEAFE;
+}
+.neo-modal-icon.info svg {
+    color: #2563EB;
+}
+
+.neo-modal-title {
+    font-family: "Space Grotesk", 'Sora', 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #08090B;
+    margin: 0;
+}
+
+.neo-modal-subtitle {
+    font-size: 12px;
+    color: #08090B;
+    opacity: 0.55;
+    margin: 0;
+    margin-top: 2px;
+}
+
+.neo-modal-body {
+    padding: 0 4px;
+}
+
+.neo-modal-message {
+    font-size: 13px;
+    font-weight: 500;
+    color: #08090B;
+    opacity: 0.75;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.neo-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 4px;
+}
+
+.neo-modal-btn {
+    font-family: "Space Grotesk", 'Sora', 'Plus Jakarta Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: 2px solid #08090B;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    outline: none;
+}
+
+.neo-modal-btn-primary {
+    background: #E6B900;
+    color: #08090B;
+    box-shadow: 3px 4px #08090B;
+}
+
+.neo-modal-btn-primary:hover {
+    box-shadow: 1px 2px #08090B;
+    transform: translate(2px, 2px);
+}
+
+.neo-modal-btn-secondary {
+    background: #FFFEFE;
+    color: #08090B;
+    box-shadow: 3px 4px #08090B;
+}
+
+.neo-modal-btn-secondary:hover {
+    background: #ECEFF1;
+    box-shadow: 1px 2px #08090B;
+    transform: translate(2px, 2px);
+}
+
+.header-text h3 {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--neo-black);
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-badge-tag {
+    background: var(--neo-green);
+    border: 1.5px solid var(--neo-black);
+    box-shadow: var(--neo-shadow-xs);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--neo-black);
+}
+
+.header-text p {
+    font-size: 13px;
+    font-weight: 500;
+    color: #4B5563;
+}
+
+/* Header Back Button */
+.wrapper-cancel-1 a,
+.btn-back-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: var(--neo-white);
+    border: 2px solid var(--neo-black);
+    box-shadow: var(--neo-shadow-sm);
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--neo-black);
+    text-decoration: none;
+    transition: all 0.15s ease-in-out;
+}
+
+.wrapper-cancel-1 a:hover,
+.btn-back-header:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: var(--neo-shadow);
+    background: #F3F4F6;
+}
+
+.wrapper-cancel-1 a:active,
+.btn-back-header:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px var(--neo-black);
+}
+
+/* ==========================================================================
+   FORM GRID & INPUT CONTROLS
+   ========================================================================== */
+.form-content {
+    padding: 0;
+}
+
+.form-grid {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 22px;
+}
+
+.form-grid-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-grid-3 {
+    grid-template-columns: 1fr 1.2fr 1.2fr;
+}
+
+.form-grid-1 {
+    grid-template-columns: 1fr;
+}
+
+.input-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+}
+
+.input-content label {
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--neo-black);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.required-star {
+    color: var(--neo-red);
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.input-content input[type="text"],
+.input-content input[type="email"],
+.input-content input[type="number"],
+.input-content select {
+    height: 44px;
+    width: 100%;
+    border-radius: 8px;
+    padding: 0 14px;
+    border: 2px solid var(--neo-black);
+    box-shadow: var(--neo-shadow-sm);
+    background: var(--neo-white);
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--neo-black);
+    outline: none;
+    transition: all 0.15s ease-in-out;
+}
+
+.input-content input::placeholder {
+    color: #9CA3AF;
+    font-weight: 400;
+}
+
+.input-content select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2308090B' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 16px;
+    padding-right: 40px;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+/* Focus & Hover states */
+.input-content input:focus,
+.input-content select:focus {
+    transform: translate(1px, 1px);
+    box-shadow: var(--neo-shadow-xs);
+    border-color: var(--neo-black);
+    background-color: #FFFFFF;
+}
+
+.input-content input:hover,
+.input-content select:hover {
+    border-color: var(--neo-black);
+}
+
+/* ==========================================================================
+   COVER / PHOTO UPLOAD CARD
+   ========================================================================== */
+.photo-upload-card {
+    background: #F8F9FA;
+    border: 2px solid var(--neo-black);
+    box-shadow: var(--neo-shadow-sm);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 26px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.photo-preview-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.photo-preview-box {
+    width: 100px;
+    height: 115px;
+    border: 2px solid var(--neo-black);
+    box-shadow: var(--neo-shadow-sm);
+    border-radius: 10px;
+    background: #FFFFFF;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.photo-preview-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-badge-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: var(--neo-gray);
+    border: 1px solid var(--neo-black);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: var(--neo-black);
+    letter-spacing: 0.4px;
+}
+
+.photo-upload-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.photo-upload-details .upload-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--neo-black);
+}
+
+.photo-upload-details .upload-desc {
+    font-size: 12px;
+    color: #4B5563;
+}
+
+.photo-upload-details input[type="file"] {
+    font-size: 12px;
+    font-weight: 500;
+    color: #374151;
+    cursor: pointer;
+}
+
+.photo-upload-details input[type="file"]::file-selector-button {
+    padding: 8px 16px;
+    margin-right: 14px;
+    background: var(--neo-yellow);
+    border: 2px solid var(--neo-black);
+    box-shadow: var(--neo-shadow-xs);
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--neo-black);
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+}
+
+.photo-upload-details input[type="file"]::file-selector-button:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: var(--neo-shadow-sm);
+    background: #FFED4A;
+}
+
+.photo-upload-details input[type="file"]::file-selector-button:active {
+    transform: translate(1px, 1px);
+    box-shadow: 0px 0px 0px var(--neo-black);
+}
+
+/* ==========================================================================
+   BUTTON ACTIONS (NEOBRUTALIST BUTTONS)
+   ========================================================================== */
+.wrapper-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 14px;
+    padding-top: 18px;
+    border-top: 2px solid #E5E7EB;
+}
+
+.btn-neo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 24px;
+    border-radius: 10px;
+    font-size: 13.5px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid var(--neo-black);
+    box-shadow: var(--neo-shadow);
+    cursor: pointer;
+    outline: none;
+    transition: all 0.15s ease-in-out;
+}
+
+.btn-neo:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: var(--neo-shadow-lg);
+}
+
+.btn-neo:active {
+    transform: translate(2px, 2px);
+    box-shadow: var(--neo-shadow-xs);
+}
+
+.btn-neo-secondary {
+    background: var(--neo-white);
+    color: var(--neo-black);
+}
+
+.btn-neo-secondary:hover {
+    background: #F3F4F6;
+}
+
+.btn-neo-primary {
+    background: var(--neo-yellow);
+    color: var(--neo-black);
+}
+
+.btn-neo-primary:hover {
+    background: #FFED4A;
+}
+
+.btn-neo-success {
+    background: var(--neo-green);
+    color: var(--neo-black);
+}
+
+.btn-neo-success:hover {
+    background: #6EE7B7;
+}
+
+/* ==========================================================================
+   MODAL DIALOG (NEOBRUTALISM NOTIFICATION)
+   ========================================================================== */
+.main-modal-notif {
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 9, 11, 0.65);
+    backdrop-filter: blur(4px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-modal-notif.hidden {
+    display: none;
+}
+
+.main-content-modal-insert,
+.main-content-modal-error {
+    background: var(--neo-white);
+    border: 2px solid var(--neo-black);
+    box-shadow: var(--neo-shadow-xl);
+    border-radius: 16px;
+    padding: 24px 26px;
+    width: 90%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    animation: modalPop 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes modalPop {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.modal-header-neo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.modal-icon-badge {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    border: 2px solid var(--neo-black);
+    box-shadow: var(--neo-shadow-xs);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.modal-icon-badge.success {
+    background: var(--neo-green);
+}
+
+.modal-icon-badge.warning {
+    background: var(--neo-yellow);
+}
+
+.modal-icon-badge.danger {
+    background: var(--neo-coral);
+}
+
+.modal-title-wrap h2 {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--neo-black);
+}
+
+.modal-title-wrap p {
+    font-size: 11px;
+    font-weight: 600;
+    color: #6B7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.modal-body-neo {
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: #374151;
+    background: #F8F9FA;
+    border: 1px solid var(--neo-black);
+    border-radius: 8px;
+    padding: 10px 14px;
+}
+
+.modal-actions-neo {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.modal-actions-neo button {
+    padding: 9px 20px;
+    font-size: 13px;
+    border-radius: 8px;
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT
+   ========================================================================== */
+@media (max-width: 840px) {
+    .main-content {
+        padding: 20px 18px;
+        margin: 15px auto;
+    }
+    .form-grid-2,
+    .form-grid-3 {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .photo-upload-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .wrapper-button {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .btn-neo {
+        width: 100%;
+    }
+}

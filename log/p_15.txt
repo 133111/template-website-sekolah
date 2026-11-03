@@ -1,0 +1,5 @@
+|| YANG BARU DIPELAJARI ||
+dari pertemuan 15 adalah :
+    functions:
+    - mysqli_num_rows() Default params -> $conn, 'arguments' -> digunakan untuk Memeriksa Keberadaan Data: Memastikan apakah query yang dijalankan menghasilkan data atau tidak (misalnya, apakah username sudah terdaftar atau belum).
+    - password_verify() Default params -> $rawData, $dataHash -> digunakan untuk mencocokan/memverifikasi(sesuai namanya) password yang diinputkan oleh user dan password hash yang ada di database dengan algoritma 'PENCOCOKAN', bila cocok == TRUE

@@ -1,0 +1,64 @@
+--------------------------------------------------------------------------------
+1. WARNA UTAMA / STRUKTUR (BASE & BORDERS)
+--------------------------------------------------------------------------------
+#08090B : Deep Onyx Black   -> Hitam pekat tajam untuk Border garis luar & Box-Shadow.
+#000000 : Pure Black        -> Hitam absolut untuk teks utama dan ikon bergaris tebal.
+#FFFFFF : Pure White        -> Putih bersih untuk latar kartu (card surface) agar kontras.
+#F8F9FA : Snow Off-White    -> Latar belakang halaman modern & clean.
+#F4F4F0 : Warm Paper Canvas -> Latar abu-krem bernuansa kertas retro / koran modern.
+#ECEFF1 : Cool Silver Mist  -> Abu-abu terang untuk container sekunder / badge netral.
+
+--------------------------------------------------------------------------------
+2. WARNA SIGNATURE / VIBRANT ACCENT (WARNA POP NEOBRUTALISM)
+--------------------------------------------------------------------------------
+#FFE600 : Electric Cyber Yellow -> Kuning terang neon yang sangat mencolok, khas neobrutalism.
+#E7B800 : Mustard Gold (Warm)   -> Kuning keemasan tegas (seperti badge "HARI INI / LOG TIME").
+#00F59B : Acid / Neon Green     -> Hijau neon elektrik berenergi tinggi.
+#4ADE80 : Fresh Mint Green      -> Hijau daun terang segar untuk aksi positif / badge aktif.
+#FF4D6D : Hot Punch Coral       -> Merah-pink berani untuk tombol CTA atau status bahaya.
+#F472B6 : Bubblegum Pink        -> Pink neon playful yang sangat populer di tema neo.
+#38BDF8 : Electric Sky Blue     -> Biru langit cerah bercahaya untuk tautan dan sorotan.
+#60A5FA : Cyber Dodger Blue     -> Biru muda tajam yang modern dan profesional.
+#A78BFA : Neon Purple Violet    -> Ungu pastel bercahaya untuk kartu statistik / kategori admin.
+#FF7A00 : Vivid Tangerine       -> Oranye menyala yang enerjik untuk alert / kategori penting.
+
+--------------------------------------------------------------------------------
+3. WARNA NEO PASTEL (BACKGROUND BADGE / CARD STATS)
+--------------------------------------------------------------------------------
+Warna pastel dengan saturasi pas yang cocok jika dibingkai border hitam #08090B:
+
+#A7F3D0 : Mint Pastel Soft     -> Hijau pastel segar (cocok untuk Card "Total Siswa / Sukses").
+#FDE047 : Canary Pastel Yellow -> Kuning cerah lembut (cocok untuk Card "Total Jurusan").
+#7DD3FC : Ice Sky Pastel       -> Biru langit lembut (cocok untuk Card "Total Guru / Info").
+#DDD6FE : Lilac Lavender       -> Ungu lavender manis (cocok untuk Card "Total Admin").
+#FECDD3 : Soft Peach Pink      -> Pink pastel lembut untuk notifikasi atau status perhatian.
+#FED7AA : Creamsicle Orange    -> Oranye pastel lembut untuk peringatan ringan.
+
+--------------------------------------------------------------------------------
+4. STATUS & NOTIFIKASI (ALERT & ACTION)
+--------------------------------------------------------------------------------
+#22C55E : Success Green -> Hijau murni untuk konfirmasi aksi sukses / data aktif.
+#EF4444 : Danger Red    -> Merah pekat untuk tombol hapus / error.
+#F59E0B : Warning Amber -> Kuning-oranye untuk tombol ubah / peringatan.
+#06B6D4 : Info Cyan     -> Biru toska untuk panduan atau status sistem.
+
+--------------------------------------------------------------------------------
+5. CONTOH KOMBINASI PALET SIAP PAKAI (PRESET PAIRINGS)
+--------------------------------------------------------------------------------
+
+[Preset 1: Cyberpunk Sunshine]
+- Canvas Background: #FFFDF0
+- Card Background  : #FFFFFF
+- Border & Shadow  : #08090B
+- Accent Colors    : #FFE600 (Yellow), #4ADE80 (Green), #FF4D6D (Coral)
+
+[Preset 2: Clean Pastel Punch] (Sesuai Layout SIMS SMK)
+- Canvas Background: #F8F9FA
+- Card Background  : #FFFFFF
+- Border & Shadow  : #08090B (2px solid border, 3px 3px box-shadow)
+- Stat Card 1 (Siswa)   : #A7F3D0 (Mint)
+- Stat Card 2 (Jurusan) : #FDE047 (Yellow)
+- Stat Card 3 (Guru)    : #7DD3FC (Sky Blue)
+- Stat Card 4 (Admin)   : #DDD6FE (Lavender)
+
+================================================================================

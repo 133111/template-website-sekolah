@@ -1,0 +1,15 @@
+|| YANG BARU DIPELAJARI ||
+dari pertemuan 16 adalah :
+    SESSION masih dalam materi terkait sistem Login, dimana fungsi dari session ini intinya adalah terkait sesi aktivitas/periode aktivitas user saat mengakses website (sesuai namanya)
+    Dimana SESSION ini menggunakan $_SESSION sebagai wadah menyimpan data sessionnya didalam prosesnya.
+    
+    Yang dimana dengan metode SESSION ini, dapat mengirimkan variabel antar halaman/bahkan seluruhnya yang dituju dalam 1 website
+    Dan untuk reminder, bahwa SESSION ini adalah tiket untuk aksesable sistem WEBSITE yang dimana disimpan di sisi server
+    Untuk di sisi client yaitu browser adalah COOKIE yang ada di pertemuan selanjutnya
+        Jadi mekanismenya SESSION itu seperti customer datang ke taman dan beli tiket, dimana tiket yang dikasih adalah COOKIE yang dikasih Kasir tiket, dan kasir tiket akan membuat daftar pelanggan atas customer itu di "list customer" agar bisa digunakan pekerja di dalam taman untuk verifikasi bahwa dia sudah beli tiket (SESSION dan dalam Server), lalu disimpan di dalam saku celana(COOKIE BROWSER) si customernya
+        Jadi saat customer mau menaiki suatu wahana(page web lain), customer tinggal tunjukin tiket dari saku (ambil data dari cookie browser) dan kasih liat ke penjaga wahana (Server), dan penjaga wahana itu akan cek apakah di "list customer" yang dibuat oleh kasir tiket sudah ada data cust ini atau tidal (Session-Server Side)
+            Makanya cookie untuk kredensial ada di browser client dan server sebagai verifikasi method nya (intinya session di server, dan cookie di browser berdasar esensi dari seluruh penjelasan tadi)
+    Functions :
+        - session-start() -> untuk memulai SESI dalam halaman web (wajib diinisialisasi di setiap halaman web yang ada agar $_SESSION bisa terdeteksi)
+        - session-destroy() -> untuk menghapus SESI dalam halaman web
+        - session_unset() -> untuk menghapus data dalam loker tmp yang berisi data $_SESSION
