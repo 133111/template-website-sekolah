@@ -7,7 +7,7 @@
             <div class="header">
                 <div class="welcome-bar-dashboard">
                     <div class="absolute-content">
-                        <div class="card-photo">
+                        <div class="card-photo rounded-[22px] relative right-1">
                             <img class="rounded-[90px]" src="<?= BASE_URL ?>/view/assets/logo2rev.png" alt="Logo Sekolah">
                         </div>
                         <div class="admin-text">
