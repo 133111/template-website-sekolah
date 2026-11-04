@@ -1,4 +1,0 @@
-|| YANG BARU DIPELAJARI ||
-dari pertemuan 11 adalah :
-    -> Pengenalan atribut html baru setelah required yaitu 'value', yaitu atribut yang memberi nilai/value/isi [sesuai namanya] pada isi input
-    -> Pengenalan Type Hidden pada <input>, dimana agar data terkirim tanpa user/client perlu melihatnya, sering digunakan pada input berisi id untuk dikirim ke fungsi sebagai identifier 

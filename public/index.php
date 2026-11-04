@@ -88,8 +88,8 @@ $id = $_SESSION["admin_account"] ?? '0';
             <div class="header">
                 <div class="welcome-bar-dashboard">
                     <div class="absolute-content">
-                        <div class="card-photo">
-                            <img class="rounded-[90px]" src="../view/assets/logosekolah.png"  alt="#">
+                        <div class="card-photo rounded-[22px] relative right-1">
+                            <img class="rounded-[90px]" src="../view/assets/logo2rev.png"  alt="#">
                         </div>
                         <div class="admin-text">
                             <p>Panel Admin</p>

@@ -9,8 +9,6 @@ if(!isset($_SESSION["login"])){
     exit;
 }
 
-define("BASE_URL", "/Raihan-PHP/MATERI PHP/materi_php_sandhika/PERTEMUAN 18/project");
-
 // call helpers and controllers
 include_once __DIR__ . '/../../public/routes.php';
 require_once __DIR__ . '/../../config/functions.php';
@@ -69,6 +67,14 @@ $semuaData = count($allMahasiswa);
 
 $allAdmins = $Guru->fetchAll("SELECT * FROM users");
 $totalAdmin = count($allAdmins);
+
+$idAdmin = (int) ($_SESSION["admin_account"] ?? 0);
+if(($_SESSION["role"] ?? "") === "key_admin"){
+    $adminRows = query("SELECT * FROM superadmin WHERE id = $idAdmin");
+}else{
+    $adminRows = query("SELECT * FROM users WHERE id = $idAdmin");
+}
+$dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
 ?>
 
 <!DOCTYPE html>
@@ -76,14 +82,15 @@ $totalAdmin = count($allAdmins);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manajemen Guru - SIMS SMK 1 NGAWI</title>
-    <link rel="stylesheet" href="<?= BASE_URL ?>/view/manajemen-guru/guru.css"> <!-- main css -->
-    <!-- Import Font Inter & Plus Jakarta Sans & Space Grotesk -->
+    <title>Manajemen Guru</title>
+    <link rel="stylesheet" href="../view/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- import dist tailwind -->
-    <link rel="stylesheet" href="<?= BASE_URL ?>/dist/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../dist/output.css">
 </head>
 
 <body>
@@ -120,7 +127,7 @@ $totalAdmin = count($allAdmins);
                 <div class="welcome-bar-dashboard">
                     <div class="absolute-content">
                         <div class="card-photo">
-                            <img class="rounded-[90px]" src="<?= BASE_URL ?>/view/assets/logosekolah.png" alt="Logo Sekolah">
+                            <img class="rounded-[90px]" src="../view/assets/logo2rev.png" alt="#">
                         </div>
                         <div class="admin-text">
                             <p>Panel Admin</p>
@@ -148,9 +155,9 @@ $totalAdmin = count($allAdmins);
                         </a>
                     </div>
                 </div>
-                <div id="content-menu" class="content-menu">
+                <div id="content-menu" class="content-menu active">
                     <div class="anchor">
-                        <a href="guru" style="font-size:13px;" onclick="window.__sorotan='guru'">
+                        <a href="guru" style="font-size:13px ;" onclick="window.__sorotan='guru'">
                             <div class="main-anchor-menu" style="display:flex; gap:4%;">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6" width="20">
                                     <path d="M3.375 3C2.339 3 1.5 3.84 1.5 4.875v.75c0 1.036.84 1.875 1.875 1.875h17.25c1.035 0 1.875-.84 1.875-1.875v-.75C22.5 3.839 21.66 3 20.625 3H3.375Z" />
@@ -233,13 +240,13 @@ $totalAdmin = count($allAdmins);
                 <div class="logout-section">
                     <div class="logout flex flex-col justify-start gap-2">
                         <div class="main-logout-svg flex justify-between items-center relative right-[2%]">
-                            <a href="<?= BASE_URL ?>/public/logout.php" class="flex justify-start items-center w-full h-full p-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 opacity-80"><path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" /></svg>
+                            <a href="logout" class="flex justify-start items-center w-full h-full p-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" lass="opacity-80" width="22" height="24" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" /></svg>
                                 <p class="text-[11px] text-white relative left-2 font-medium opacity-90">Help & information</p>
                             </a>
                         </div>
                         <div class="main-logout-svg flex justify-between items-center relative right-[1%]">
-                            <a href="<?= BASE_URL ?>/public/logout.php" class="flex justify-start items-center relative top-2 w-full h-full p-2">
+                            <a href="logout" class="flex justify-start items-center relative top-2 w-full h-full p-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="opacity-80 relative left-[1px]" width="20" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
                                 <p class="text-[11px] text-red-400/85 relative left-2 font-semibold opacity-90">Log out</p>
                             </a>
@@ -258,48 +265,50 @@ $totalAdmin = count($allAdmins);
                 <div class="hero-header">
                     <div class="content-hero-header">
                         <div class="hero-header-se1">
-                            <div id="toggle-sidebar" class="svg-1 border border-[#08090B] shadow-[-2px_2px_#08090B] hover:bg-[rgba(239,232,239,0.8)] cursor-pointer">
+                            <div id="toggle-sidebar" class="svg-1 relative left-[4px] border border-[#08090B] shadow-[-2px_2px_#08090B] hover:bg-[rgba(239,232,239,0.8)] cursor-pointer">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                     <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75H12a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
                                 </svg>
                             </div>
-                            <h3 class="text-[1.2rem] relative font-semibold left-2 text-[#08090B]">Manajemen Guru</h3>
+                            <h3 class="text-[1.2rem] relative font-semibold left-2">Manajemen Guru</h3>
                         </div>
                     </div>
                     <div class="account-hero-header">
                         <div class="notif-icons-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" width="25">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#08090B" class="size-6" width="25">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
                             </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" width="25">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#08090B" class="size-6" width="25">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
                             </svg>
                         </div>
-                        <div class="account-img-hero-header cursor-pointer rounded-full transition-colors duration-300">
-                            <div id="main-menu" class="main-menu flex items-center gap-2">
-                                <div class="main-img-hero-header shrink-0">
-                                    <img src="<?= BASE_URL ?>/view/assets/grcee.jpg" alt="Admin Avatar">
+                        <div class="account-img-hero-header cursor-pointer rounded-full transition-colors duration-400 ease-in-out">
+                            <div id="main-menu" class="main-menu flex">
+                                <div class="main-img-hero-header flex justify-center items-center relative border border-[#08090B] shadow-[-2px_2px_#08090B] relative right-[5px] rounded-[25px]">
+                                    <div class="img-profileOnHeader w-[45px] text-center">
+                                        <strong class="text-[26px] text-[#08090B]"><?= strtoupper(substr($dataAdmin["username"] ?? "Admin", 0, 1)) ;?></strong>
+                                    </div>
                                 </div>
                                 <div class="hero-text-img">
                                     <div class="main-hero-text-img">
                                         <p class="font-semibold flex items-center">SMK N 1 NGAWI 
-                                            <span class="flex items-center relative top-0.5 ml-1">
-                                                <svg class="w-[18px] h-[18px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                                </svg>
-                                            </span>
-                                        </p>
+                                        <span class="flex items-center relative top-1 left-[3px]">
+                                            <svg class="w-[20px] h-[20px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                            </svg>
+                                        </span>
+                                    </p>
                                     </div>
                                     <div class="second-hero-text-img">
                                         <p>Administrator</p>
                                     </div>
                                 </div>
                             </div>
-                            <div id="sub-menu" class="hidden sub-menu absolute top-[3.8rem] right-0 z-50 bg-[#FFFEFE] rounded-[10px] w-[140px] shadow-[4px_4px_0px_#08090B] border-2 border-[#08090B]">
-                                <div class="main-logout-svg flex justify-between items-center">
-                                    <a href="<?= BASE_URL ?>/public/logout.php" class="flex justify-start items-center w-full h-full p-2.5 hover:bg-slate-100 transition-colors">
-                                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out text-red-600"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
-                                       <p class="text-[12px] text-red-600 ml-2 font-bold">Log out</p>
+                            <div id="sub-menu" class="sub-menuMain1 hidden sub-menu absolute top-[3.4rem] left-[20%] z-20 bg-[#FFFEFE] !backdrop-blur rounded-b-[8px] shadow-[-2px_3px_#08090B] w-[80%] h-[30px]">
+                                <div class="main-logout-svg flex justify-between items-center relative right-[1%]">
+                                    <a href="logout" class="flex justify-start items-center relative top-2 w-full h-full p-2">
+                                       <svg xmlns="http://www.w3.org/2000/svg" class="relative left-3" width="16" height="18" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                                       <p class="text-[11px] text-red-600 relative left-4 font-semibold ">Log out</p>
                                     </a>
                                 </div>
                             </div>
@@ -313,7 +322,7 @@ $totalAdmin = count($allAdmins);
         <div class="main-content">
             <!-- Items Card Above Search Bar -->
             <div class="wrapper-allitems w-full flex justify-center">
-                <div class="all-items flex justify-between items-center w-[95%]">
+                <div class="all-items flex justify-center items-center w-[95%] gap-[5px]">
                     <div class="card-section-items">
                         <div class="first-section">
                             <div class="slider-card" style="transform:translateY(120%); opacity: 0; animation: kartu1 0.4s 0.3s ease-out forwards;">

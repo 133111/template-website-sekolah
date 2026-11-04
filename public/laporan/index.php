@@ -1,5 +1,5 @@
 <?php
-define("BASE_URL", "/Raihan-PHP/MATERI PHP/materi_php_sandhika/PERTEMUAN 18/project");
+define("BASE_URL", "/school-dashboard-template");
 ?>
 
 

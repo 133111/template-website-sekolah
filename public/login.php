@@ -45,7 +45,7 @@ include __DIR__ . '/../controllers/login-config.php';
         <div class="container">
             <div class="header-text">
                 <div class="foto-wrap">
-                    <img src="../view/assets/logosekolah.png" alt="Logo Sekolah">
+                    <img src="../view/assets/logo2rev.png" alt="Logo Sekolah">
                 </div>
                 <strong>Selamat Datang</strong>
                 <p style="font-family: 'Sora', 'Plus Jakarta Sans', sans-serif;">Login untuk masuk ke sistem Admin</p>

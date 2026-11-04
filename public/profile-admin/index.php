@@ -1,5 +1,5 @@
 <?php
-define("BASE_URL", "/Raihan-PHP/MATERI PHP/materi_php_sandhika/PERTEMUAN 18/project");
+define("BASE_URL", "/school-dashboard-template");
 include_once __DIR__ . '/../../public/routes.php';
 include_once __DIR__ . '/../../controllers/profile-admin/index-config-profile.php';
 $admin = new adminManajemen;

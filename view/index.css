@@ -103,7 +103,6 @@ body {
 .welcome-bar-dashboard .card-photo img {
     width: 70px;
     height: 65px;
-    box-shadow: 2px 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
 
 .absolute-content .admin-text {

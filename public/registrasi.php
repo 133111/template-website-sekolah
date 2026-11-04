@@ -43,7 +43,7 @@ include_once __DIR__ . '/../controllers/register-config.php' ;
         <div class="container container-register">
             <div class="header-text">
                 <div class="foto-wrap-registerPage">
-                    <img src="../view/assets/logosekolah.png" alt="Logo Sekolah">
+                    <img src="../view/assets/logo2rev.png" alt="Logo Sekolah">
                 </div>
                 <strong>Selamat Datang!</strong>
                 <p style="font-family: 'Sora', 'Plus Jakarta Sans', sans-serif;">Silahkan lakukan pendaftaran</p>

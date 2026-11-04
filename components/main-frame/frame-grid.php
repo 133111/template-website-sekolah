@@ -8,7 +8,7 @@
                 <div class="welcome-bar-dashboard">
                     <div class="absolute-content">
                         <div class="card-photo">
-                            <img class="rounded-[90px]" src="<?= BASE_URL ?>/view/assets/logosekolah.png" alt="Logo Sekolah">
+                            <img class="rounded-[90px]" src="<?= BASE_URL ?>/view/assets/logo2rev.png" alt="Logo Sekolah">
                         </div>
                         <div class="admin-text">
                             <p>Panel Admin</p>

@@ -9,7 +9,7 @@
                 <div class="welcome-bar-dashboard">
                     <div class="absolute-content">
                         <div class="card-photo">
-                            <img src="../view/assets/logosekolah.png" width="20" alt="#" class="rounded-full">
+                            <img src="../view/assets/logo2rev.png" width="20" alt="#" class="rounded-full">
                         </div>
                         <div class="admin-text">
                             <p>Panel Admin</p>
