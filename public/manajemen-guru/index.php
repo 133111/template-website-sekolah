@@ -8,7 +8,7 @@ if(!isset($_SESSION["login"])){
     header("Location: ../login.php");
     exit;
 }
-
+define("BASE_URL", "/school-dashboard-template"); //set const
 // call helpers and controllers
 include_once __DIR__ . '/../../public/routes.php';
 require_once __DIR__ . '/../../config/functions.php';
@@ -126,7 +126,7 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
             <div class="header">
                 <div class="welcome-bar-dashboard">
                     <div class="absolute-content">
-                        <div class="card-photo">
+                        <div class="card-photo rounded-[22px] relative right-1">
                             <img class="rounded-[90px]" src="../view/assets/logo2rev.png" alt="#">
                         </div>
                         <div class="admin-text">

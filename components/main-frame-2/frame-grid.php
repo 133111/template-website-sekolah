@@ -8,7 +8,7 @@
             <div class="header">
                 <div class="welcome-bar-dashboard">
                     <div class="absolute-content">
-                        <div class="card-photo">
+                        <div class="card-photo rounded-[22px] relative right-1">
                             <img src="../view/assets/logo2rev.png" width="20" alt="#" class="rounded-full">
                         </div>
                         <div class="admin-text">
