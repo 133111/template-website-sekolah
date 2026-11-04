@@ -270,7 +270,7 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                                     <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75H12a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
                                 </svg>
                             </div>
-                            <h3 class="text-[1.2rem] relative font-semibold left-2">Manajemen Guru</h3>
+                            <h3 class="text-[1.2rem] relative font-semibold left-2">Main Dashboard</h3>
                         </div>
                     </div>
                     <div class="account-hero-header">
@@ -320,14 +320,17 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
 
         <!-- Main Content Body -->
         <div class="main-content">
-            <!-- Items Card Above Search Bar -->
-            <div class="wrapper-allitems w-full flex justify-center">
+            <div class="hyperlinkOverview w-full h-[45px]">
+                <div class="mainContentOverview h-full w-[30%] bg-red-500"></div>
+            </div>
+            <!-- Items Card Above Search Bar --> 
+            <div class="wrapper-allitems w-full flex justify-center relative top-[1rem] bg-red-600">
                 <div class="all-items flex justify-center items-center w-[95%] gap-[5px]">
                     <div class="card-section-items">
                         <div class="first-section">
-                            <div class="slider-card" style="transform:translateY(120%); opacity: 0; animation: kartu1 0.4s 0.3s ease-out forwards;">
+                            <div class="slider-card">
                                 <div class="card-items">
-                                    <h6>TOTAL SISWA</h6>
+                                    <h6 class="!text-[11px] font-semibold">TOTAL SISWA</h6>
                                     <div class="main-text-img bg-[#A7F3D0]">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="22" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" /></svg>
                                     </div>
@@ -336,9 +339,9 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                                 </div>
                             </div>
 
-                            <div class="slider-card" style="transform:translateY(120%); opacity: 0; animation: kartu1 0.4s 0.4s ease-out forwards;">
+                            <div class="slider-card">
                                 <div class="card-items">
-                                    <h6>TOTAL JURUSAN</h6>
+                                    <h6 class="!text-[11px] font-semibold">TOTAL JURUSAN</h6>
                                     <div class="main-text-img bg-[#FDE047]">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="22" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" /></svg>
                                     </div>
@@ -349,9 +352,9 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                         </div>
 
                         <div class="second-section">
-                            <div class="slider-card" style="transform:translateY(120%); opacity: 0; animation: kartu1 0.4s 0.5s ease-out forwards;">
+                            <div class="slider-card">
                                 <div class="card-items">
-                                    <h6>TOTAL GURU</h6>
+                                    <h6 class="!text-[11px] font-semibold">TOTAL GURU</h6>
                                     <div class="main-text-img bg-[#7DD3FC]">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="22" viewBox="0 0 24 24" stroke-width="1.7" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" /></svg>
                                     </div>
@@ -360,9 +363,9 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                                 </div>
                             </div>
 
-                            <div class="slider-card" style="transform:translateY(120%); opacity: 0; animation: kartu1 0.4s 0.7s ease-out forwards;">
+                            <div class="slider-card">
                                 <div class="card-items">
-                                    <h6>TOTAL ADMIN</h6>
+                                    <h6 class="!text-[11px] font-semibold">TOTAL ADMIN</h6>
                                     <div class="main-text-img bg-[#DDD6FE]">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                                     </div>
@@ -374,17 +377,17 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                     </div>
 
                     <div class="second-section-card-items p-2 rounded-[12px] overflow-hidden relative">
-                        <div class="main-wrapper-section-card flex gap-3 w-full h-full">
+                        <div class="main-wrapper-section-card flex items-center gap-3 w-full h-full">
                             <!-- Card Status Manajemen -->
-                            <div class="kartu-1 w-[49%] h-full rounded-[12px] overflow-hidden relative">
-                                <div class="konten-kartu1 h-full w-full p-3">
+                            <div class="kartu-1 w-[50%] h-[96%] rounded-[12px] overflow-hidden relative">
+                                <div class="konten-kartu1 h-full w-full !p-2">
                                     <h1 class="text-black font-bold text-[14px]">Status Manajemen</h1>
                                     <div class="day-status flex justify-between items-center mt-1">
                                         <p class="text-black text-[11px] font-medium opacity-80">Activity in 24h</p>
                                         <p class="text-[11px] text-black font-semibold"><?= date("d/m/y"); ?></p>
                                     </div>
-                                    <div class="wrapper-4card relative flex justify-center items-center flex-col mt-2 w-full gap-2">
-                                        <div class="card-of-1 overflow-hidden text-black text-[13px] px-2 flex items-center h-[34px] w-full rounded-[8px]">
+                                    <div class="wrapper-4card relative flex justify-center items-center flex-col !mt-4 w-full gap-3">
+                                        <div class="card-of-1 overflow-hidden text-black text-[13px] !p-2 flex items-center h-[38px] w-full rounded-[8px]">
                                             <div class="wrapper-bg-svg bg-[#00F59B] w-6 h-6 rounded-[6px] flex justify-center items-center shrink-0">
                                                 <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#08090B">
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 10.5v6m3-3H9m4.06-7.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
@@ -398,7 +401,7 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                                                 <span class="text-emerald-600 font-extrabold text-[13px]">+<?= $_SESSION["log_create"] ?? 0; ?></span>
                                             </div>
                                         </div>
-                                        <div class="card-of-1 overflow-hidden text-black text-[13px] px-2 flex items-center h-[34px] w-full rounded-[8px]">
+                                        <div class="card-of-1 overflow-hidden text-black text-[13px] !p-2 flex items-center h-[38px] w-full rounded-[8px]">
                                             <div class="wrapper-bg-svg bg-[#EF4444] w-6 h-6 rounded-[6px] flex justify-center items-center shrink-0">
                                                 <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#08090B">
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
@@ -412,7 +415,7 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                                                 <span class="text-rose-600 font-extrabold text-[13px]">-<?= $_SESSION["log_delete"] ?? 0; ?></span>
                                             </div>
                                         </div>
-                                        <div class="card-of-1 overflow-hidden text-black text-[13px] px-2 flex items-center h-[34px] w-full rounded-[8px]">
+                                        <div class="card-of-1 overflow-hidden text-black text-[13px] !p-2 flex items-center h-[38px] w-full rounded-[8px]">
                                             <div class="wrapper-bg-svg bg-[#F59E0B] w-6 h-6 rounded-[6px] flex justify-center items-center shrink-0">
                                                 <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#08090B">
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5m6 4.125 2.25 2.25m0 0 2.25 2.25M12 13.875l2.25-2.25M12 13.875l-2.25 2.25M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
@@ -426,14 +429,14 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                                                 <span class="text-amber-600 font-extrabold text-[13px]"><?= $_SESSION["log_update"] ?? 0; ?></span>
                                             </div>
                                         </div>
-                                        <div class="card-of-1 overflow-hidden text-black text-[13px] px-2 flex items-center h-[34px] w-full rounded-[8px]">
+                                        <div class="card-of-1 overflow-hidden text-black text-[13px] !p-2 flex items-center h-[38px] w-full rounded-[8px]">
                                             <div class="wrapper-bg-svg bg-[#22C55E] w-6 h-6 rounded-[6px] flex justify-center items-center shrink-0">
                                                 <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#08090B">
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                                 </svg>
                                             </div>
                                             <div class="card-info-wrap flex justify-between w-full ml-2">
-                                                <strong class="text-black text-[12px]">Success</strong>
+                                                <strong class="text-black text-[12px]">Status</strong>
                                                 <span class="text-emerald-700 font-semibold text-[10px]">Sistem Normal</span>
                                             </div>
                                         </div>
@@ -442,60 +445,21 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                             </div>
 
                             <!-- Card Status Sekolah -->
-                            <div class="kartu-2 w-[49%] h-full rounded-[12px] overflow-hidden relative">
-                                <div class="konten-kartu2 h-full w-full p-3">
-                                    <h1 class="text-black font-bold text-[14px]">Status Sekolah</h1>
-                                    <div class="day-status flex justify-between items-center mt-1">
-                                        <p class="text-black text-[11px] font-medium opacity-80">Snapshot today</p>
-                                        <span class="text-[10px] text-black bg-[#FDE047] rounded-[6px] px-2 py-0.5 font-bold border border-[#08090B]">HARI INI</span>
-                                    </div>
-                                    <div class="wrapper-4card relative flex justify-center items-center flex-col mt-2 w-full gap-2">
-                                        <div class="card-of-1 overflow-hidden text-black text-[13px] px-2 flex items-center h-[34px] w-full rounded-[8px]">
-                                            <div class="wrapper-bg-svg bg-[#FDE047] w-6 h-6 rounded-[6px] flex justify-center items-center shrink-0">
-                                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#08090B"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" /></svg>
-                                            </div>
-                                            <div class="card-info-wrap flex justify-between w-full ml-2">
-                                                <strong class="text-black text-[12px]">Siswa: <?= $semuaData; ?></strong>
-                                                <span class="text-black text-[10px] opacity-75">Aktif</span>
-                                            </div>
-                                        </div>
-                                        <div class="card-of-1 overflow-hidden text-black text-[13px] px-2 flex items-center h-[34px] w-full rounded-[8px]">
-                                            <div class="wrapper-bg-svg bg-[#7DD3FC] w-6 h-6 rounded-[6px] flex justify-center items-center shrink-0">
-                                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#08090B"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" /></svg>
-                                            </div>
-                                            <div class="card-info-wrap flex justify-between w-full ml-2">
-                                                <strong class="text-black text-[12px]">Guru: <?= $allGuruD; ?></strong>
-                                                <span class="text-black text-[10px] opacity-75">Mengajar</span>
-                                            </div>
-                                        </div>
-                                        <div class="card-of-1 overflow-hidden text-black text-[13px] px-2 flex items-center h-[34px] w-full rounded-[8px]">
-                                            <div class="wrapper-bg-svg bg-[#DDD6FE] w-6 h-6 rounded-[6px] flex justify-center items-center shrink-0">
-                                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#08090B"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" /></svg>
-                                            </div>
-                                            <div class="card-info-wrap flex justify-between w-full ml-2">
-                                                <strong class="text-black text-[12px]">Jurusan: 9</strong>
-                                                <span class="text-black text-[10px] opacity-75">Berjalan</span>
-                                            </div>
-                                        </div>
-                                        <div class="card-of-1 overflow-hidden text-black text-[13px] px-2 flex items-center h-[34px] w-full rounded-[8px]">
-                                            <div class="wrapper-bg-svg bg-[#FECDD3] w-6 h-6 rounded-[6px] flex justify-center items-center shrink-0">
-                                                <svg class="w-4 h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="#08090B"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" /></svg>
-                                            </div>
-                                            <div class="card-info-wrap flex justify-between w-full ml-2">
-                                                <strong class="text-black text-[12px]">Agenda</strong>
-                                                <span class="text-black text-[10px] opacity-75"><?= date("d M Y"); ?></span>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="kartu-1 w-[50%] h-[96%] !p-2 rounded-[12px] overflow-hidden relative flex flex-col border-1 gap-2">
+                                <div class="heroTextCanvas">
+                                    <h2 class="text-[13px] font-semibold">Grafik Manajemen</h2>
                                 </div>
+                                <canvas id="graphCrud-guru" class="w-full h-[15rem] bg-green-400"> <!-- chart.js -->
+                                </canvas>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+    <!-- separator content -->
             <!-- Data Table Section -->
-            <div class="wrap-main-table w-full flex justify-center">
+            <div class="wrap-main-table w-full flex justify-center relative top-[2rem]">
                 <div class="main-table flex flex-col">
                     <div class="header-table-content">
                         <div class="text-section">
@@ -601,7 +565,7 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
 <script src="<?= BASE_URL ?>/js/sorotan.js"></script>
 <script src="<?= BASE_URL ?>/js/dropdown-index.js"></script>
 <script src="<?= BASE_URL ?>/js/modalDelete.js"></script>
-<script src="<?= BASE_URL ?>/js/clock.js"></script>
+<script src="<?= BASE_URL ?>/js/manajemenGuru/chart.js"></script>
 <script>
     const hasilDelete = '<?= $resultDelete ?>';
     if(hasilDelete && typeof showReturn === 'function'){
