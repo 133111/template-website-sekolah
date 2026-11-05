@@ -18,7 +18,7 @@ if(isset($_SESSION["status_update"])){
     <link rel="stylesheet" href="../view/update.css"> <!-- conn to css -->
     <?php include_once __DIR__ . '/../components/main-frame-2/header.php';?> <!-- call header component -->
 </head>
-<body>
+<body class="body">
     <!-- call components main grid bellow -->
     <?php include_once __DIR__ . '/../components/main-frame-2/frame-grid.php';?>
 

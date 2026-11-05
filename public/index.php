@@ -50,7 +50,7 @@ $id = $_SESSION["admin_account"] ?? '0';
 </head>
 
 <!-- body below -->
-<body>
+<body class="overflowBody">
 <!-- modal -->
 <!-- delete -->
 <div id="modal-delete" class="main-modal-delete  opacity-0 transition-opacity duration-500 pointer-events-none fixed flex items-center justify-center z-[200] bg-[#08090B]/65 inset-0" >

@@ -12,7 +12,6 @@
 body {
     min-height: 400px;
     background: oklch(0.985 0.002 250);
-    overflow-y: auto;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }

@@ -15,9 +15,11 @@ const pLong = document.querySelector('#p-long');
 const svgBg = document.querySelector("#bg-svg")
 const svg = document.querySelector("#svg_delete");
 
+const mainBody = document.querySelector(".overflowBody");
 function openDeleteModal(event, url, id, nama){
     event.preventDefault();
     event.stopPropagation();
+    mainBody.classList.add("!overflow-hidden");
     mainModal.classList.remove('pointer-events-none', 'opacity-0');
     mainModal.classList.add('opacity-100');
     spanText.textContent = nama;
@@ -30,6 +32,7 @@ function openDeleteModal(event, url, id, nama){
 
 cancel.addEventListener('click', () => {
     mainModal.classList.remove('opacity-100');
+    mainBody.classList.remove("!overflow-hidden");
     mainModal.classList.add('opacity-0', 'pointer-events-none');
 })
 
