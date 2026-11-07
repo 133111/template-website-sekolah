@@ -12,7 +12,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #F4f6ff ; 
+    background: #f3f3f3d7; 
     overflow-y: auto;
     overflow-x: hidden;
     scroll-behavior: smooth;
