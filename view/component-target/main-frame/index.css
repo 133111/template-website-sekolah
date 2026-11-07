@@ -242,11 +242,10 @@ body{
     position: relative;
     right: 5px;
     height: 70px;
-    background-color: rgba(255, 254, 254, 0.7);
+    background: rgba(255, 254, 254, 0.85) ;
     backdrop-filter: blur(10px);
     border-top: 1px solid #2c2d2d1e;
     border-left: 1px solid #2c2d2d1e;
-    border-bottom: 2px solid #08090B;
     width: 100%;
 }
 

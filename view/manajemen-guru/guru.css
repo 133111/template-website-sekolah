@@ -234,9 +234,8 @@ body {
     padding: 0 24px;
     position: relative;
     height: 70px;
-    background-color: rgba(255, 254, 254, 0.85);
+    background: rgba(255, 254, 254, 0.85) ;
     backdrop-filter: blur(10px);
-    border-bottom: 2px solid #08090B;
     width: 100%;
 }
 

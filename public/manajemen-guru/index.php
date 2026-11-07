@@ -320,11 +320,16 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
 
         <!-- Main Content Body -->
         <div class="main-content">
-            <div class="hyperlinkOverview w-full h-[45px]">
-                <div class="mainContentOverview h-full w-[30%] bg-red-500"></div>
+            <div class="hyperlinkOverview w-full h-[75px] relative left-4 bottom-2 gap-4 !font-poppins">
+                <div class="mainContentOverview h-[60%] w-[30%] ">
+                    <h2 class="text-[28px] font-medium">Manajemen Guru</h2>
+                </div>
+                <div class="paragraph h-[40%] w-[30%]">
+                    <p class="text-[16px]">Halaman Manajemen Data Guru</p>
+                </div>
             </div>
             <!-- Items Card Above Search Bar --> 
-            <div class="wrapper-allitems w-full flex justify-center relative top-[1rem] bg-red-600">
+            <div class="wrapper-allitems w-full flex justify-center relative bottom-1">
                 <div class="all-items flex justify-center items-center w-[95%] gap-[5px]">
                     <div class="card-section-items">
                         <div class="first-section">
