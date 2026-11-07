@@ -234,27 +234,9 @@ body {
     padding: 0 24px;
     position: relative;
     height: 70px;
-    background-color: rgba(255, 254, 254, 0.85);
+    background: rgba(255, 254, 254, 0.85) ;
     backdrop-filter: blur(10px);
-    border-bottom: 2px solid #08090B;
     width: 100%;
-    transform: translateY(-100%);
-    opacity: 0;
-    animation: hero-header-slide 1.4s ease-out forwards,
-        hero-header-blur 2s ease-in-out forwards;
-}
-
-/* Keyframes */
-@keyframes hero-header-slide {
-    to {
-        transform: translateY(0);
-    }
-}
-
-@keyframes hero-header-blur {
-    to {
-        opacity: 1;
-    }
 }
 
 .hero-header-se1 {
@@ -396,13 +378,9 @@ body {
     width: 95%;
     padding: 20px;
     color: rgb(3, 3, 3);
-    opacity: 0;
     border: 3px solid #08090B;
     box-shadow: 3px 4px 0px #08090B;
     border-radius: 20px;
-    transform: translateY(-100%);
-    animation: from-up 1.3s ease-in-out forwards,
-        blur-header-main 2s ease-in-out forwards;
 }
 
 .card-of-wrapper-text-header {
@@ -522,7 +500,7 @@ body {
 .card-items h6 {
     color: #65748A;
     padding: 2px;
-    font-size: 11px;
+    font-size: 9px;
     font-weight: 700;
 }
 
@@ -615,11 +593,9 @@ body {
     padding: 0px;
     border-radius: 18px;
     overflow: hidden;
-    opacity: 0;
     transition: 0.3s ease-in;
     border: 2px solid #08090B;
     box-shadow: 4px 5px 0px #08090B;
-    animation: blur-tableMain 0.7s ease-in forwards;
 }
 
 @keyframes blur-tableMain {

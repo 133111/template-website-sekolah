@@ -180,8 +180,8 @@ define("BASE_URL", "/Raihan-PHP/MATERI PHP/materi_php_sandhika/PERTEMUAN 18/proj
                         <h3 class="text-[40px] font-bold opacity-85 relative bottom-[4px]">Berita Sekolah</h3>
                         <p class="text-black-500/70">Berita seputar kegiatan, acara, dan pengumuman sekolah.</p>
                     </div>
-                    <div class="article-card flex relative top-8">
-                        <article class="article bg-[#FFFEFE] !h-[450px] !w-[95%] rounded-[24px] !mr-[1.4rem]">
+                    <div class="article-card flex relative top-8 justify-between gap-2">
+                        <article class="article bg-[#FFFEFE] !h-[450px] !w-[80%] rounded-[24px] !mr-[1.4rem]">
                             <div class="news-container h-[45%] w-full bg-purple-500 rounded-t-[24px] relative !overflow-hidden">
                                 <img src="../../view/assets/SISWA-SMA-hgfnhfn.jpg" alt="#" class="w-full h-full ">
                             </div>
@@ -189,7 +189,7 @@ define("BASE_URL", "/Raihan-PHP/MATERI PHP/materi_php_sandhika/PERTEMUAN 18/proj
                                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates doloribus, alias perferendis numquam aliquam porro? Neque nobis atque animi eveniet, placeat magni eligendi, aut velit quam accusamus non minus laboriosam!</p>
                             </div>
                         </article>
-                        <article class="article bg-[#FFFEFE] !h-[450px] !w-[95%] rounded-[24px] !mr-[1.4rem] !overflow-hidden" >
+                        <article class="article bg-[#FFFEFE] !h-[450px] !w-[80%] rounded-[24px] !mr-[1.4rem] !overflow-hidden" >
                             <div class="news-container h-[45%] w-full bg-purple-500 rounded-t-[24px] relative">
                                 <img src="../../view/assets/ChatGPT Image Sep 2, 2026, 12_04_31 PM.png" alt="#" class="w-full h-full ">
                             </div>
@@ -197,7 +197,7 @@ define("BASE_URL", "/Raihan-PHP/MATERI PHP/materi_php_sandhika/PERTEMUAN 18/proj
                                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates doloribus, alias perferendis numquam aliquam porro? Neque nobis atque animi eveniet, placeat magni eligendi, aut velit quam accusamus non minus laboriosam!</p>
                             </div>
                         </article>
-                        <article class="article bg-[#FFFEFE] !h-[450px] !w-[95%] rounded-[24px] !mr-[1.4rem] !overflow-hidden">
+                        <article class="article bg-[#FFFEFE] !h-[450px] !w-[80%] rounded-[24px] !mr-[1.4rem] !overflow-hidden">
                             <div class="news-container h-[45%] w-full bg-purple-500 rounded-t-[24px] relative">
                                 <img src="../../view/assets/ChatGPT Image Sep 2, 2026, 11_52_57 AM.png" alt="#" class="w-full h-full ">
                             </div>
@@ -208,7 +208,7 @@ define("BASE_URL", "/Raihan-PHP/MATERI PHP/materi_php_sandhika/PERTEMUAN 18/proj
                     </div>
                 </section>
             </section>
-            <footer class="main-footer !bg-[#0F172A] !h-[350px] !p-[2rem] !mt-[5%] !rounded-t-[65px] relative top-[10rem]">
+            <footer class="main-footer !bg-[#08090B] !h-[350px] !p-[2rem] !mt-[5%] !rounded-t-[65px] relative top-[10rem]">
                 <div class="main-footer-content h-full !flex-col !p-[2rem] !text-white">
                     <div class="gambar-footer flex justify-center align-center h-[35%] w-[100%] relative bottom-4 flex justify-center items-center">
                         <div class="main-img h-[100%] w-[7%]">

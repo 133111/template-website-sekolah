@@ -41,7 +41,7 @@ if(isset($_POST["submit"])){
     <?php include_once __DIR__ . '/../../components/main-frame/frame-grid.php';?>
 
     <!-- Modal Profile Result (Neobrutalism) -->
-    <div id="modal-profile" class="main-modal-profile hidden fixed flex items-center justify-center inset-0 z-[9999]">
+    <div id="modal-profile" class="main-modal-profile hidden fixed flex items-center justify-center inset-0 z-[100]">
         <div class="main-content-modal-profile">
             <div class="modal-header-neo">
                 <div id="profile-icon-badge" class="modal-icon-badge success">
@@ -66,7 +66,7 @@ if(isset($_POST["submit"])){
 
         <div class="profile-admin-wrapper w-full h-[635px] relative" style="padding:34px;">
             <div class=" w-full h-[550px] rounded-[12px]">
-                <div class="hero-header-section overflow-hidden !text-black shadow-xl w-full h-[26%] rounded-[14px] grid grid-cols-[130px_1fr]" style="padding:16px;">
+                <div class="hero-header-section overflow-hidden bg-[#FFFEFE] !text-black shadow-xl w-full h-[26%] rounded-[14px] grid grid-cols-[130px_1fr]" style="padding:16px;">
                     <div class="segment1 profile-img flex justify-center items-center">
                         <div class="rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-300 flex justify-center items-center w-[70%] h-[80%] shadow-xl shadow-emerald-500/20 shrink-0">
                             <span class="text-white font-semibold text-[36px]"><?= strtoupper(substr($dataAdmin["username"], 0, 1)) ;?></span>

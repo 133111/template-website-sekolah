@@ -50,7 +50,7 @@ $id = $_SESSION["admin_account"] ?? '0';
 </head>
 
 <!-- body below -->
-<body>
+<body class="overflowBody">
 <!-- modal -->
 <!-- delete -->
 <div id="modal-delete" class="main-modal-delete  opacity-0 transition-opacity duration-500 pointer-events-none fixed flex items-center justify-center z-[200] bg-[#08090B]/65 inset-0" >
@@ -88,7 +88,7 @@ $id = $_SESSION["admin_account"] ?? '0';
             <div class="header">
                 <div class="welcome-bar-dashboard">
                     <div class="absolute-content">
-                        <div class="card-photo rounded-[22px] relative right-1">
+                        <div class="card-photo relative right-1">
                             <img class="rounded-[90px]" src="../view/assets/logo2rev.png"  alt="#">
                         </div>
                         <div class="admin-text">
@@ -604,7 +604,7 @@ $id = $_SESSION["admin_account"] ?? '0';
             </div>
         </div>
         <section class="chart-of-status-crud w-full h-[15%] !p-[3%]"> <!-- chart of crud for while 24h session active -->
-            <div class="main-chart-content !p-[12px] flex justify-between items-center w-full h-full border-2 border-black rounded-[12px] shadow-[3px_4px_#08090B] !p[2rem] !pl-[2rem] !pr-[2rem] overflow-hidden">
+            <div class="main-chart-content !p-[12px] flex justify-between items-center w-full h-[300px] border-2 border-black rounded-[12px] shadow-[3px_4px_#08090B] !p[2rem] !pl-[2rem] !pr-[2rem] overflow-hidden bg-[#FFFEFE]">
                 <canvas id="canvas-chart" class="relative top-[4%] rounded-[4px] !h-full !w-[60%]">
                     <!-- chartjs -->
                 </canvas>
@@ -762,7 +762,7 @@ $id = $_SESSION["admin_account"] ?? '0';
             item.classList.remove("bg"); //reset states
             //checking
             if(item.textContent === "aktif" && item.textContent.includes("aktif")){
-                item.classList.add("bg-[#FFE600]");
+                item.classList.add("bg-[#00F59B]");
             }else{
                 item.classList.add("bg-red-500");
             }

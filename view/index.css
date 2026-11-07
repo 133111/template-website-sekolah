@@ -11,8 +11,7 @@
 
 body {
     min-height: 400px;
-    background: oklch(0.985 0.002 250);
-    overflow-y: auto;
+    background-color: #f3f3f3d7;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
@@ -92,17 +91,19 @@ body {
 }
 
 .welcome-bar-dashboard .card-photo {
+    background: #FFE600 ;
+    border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70px;
-    width: 75px;
+    height: 48px;
+    width: 45px;
     object-fit: cover;
 }
 
 .welcome-bar-dashboard .card-photo img {
-    width: 70px;
-    height: 65px;
+    width: 45px;
+    height: 42px;
 }
 
 .absolute-content .admin-text {
@@ -244,16 +245,11 @@ body {
     position: relative;
     right: 5px;
     height: 70px;
-    background-color: rgba(255, 254, 254, 0.7);
+    background: rgba(255, 254, 254, 0.85) ;
     backdrop-filter: blur(10px);
     border-top: 1px solid #2c2d2d1e;
     border-left: 1px solid #2c2d2d1e;
-    border-bottom: 2px solid #08090B;
-    width: 101%;
-    transform: translateY(-100%);
-    opacity: 0;
-    animation: hero-header-slide 1.4s ease-out forwards,
-        hero-header-blur 2s ease-in-out forwards;
+    width: 100%;
 }
 
 /* set keyframes for hero header top */

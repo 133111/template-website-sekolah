@@ -12,7 +12,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #F4f6ff ; 
+    background: #f3f3f3d7; 
     overflow-y: auto;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -242,16 +242,11 @@ body{
     position: relative;
     right: 5px;
     height: 70px;
-    background-color: rgba(255, 254, 254, 0.7);
+    background: rgba(255, 254, 254, 0.85) ;
     backdrop-filter: blur(10px);
     border-top: 1px solid #2c2d2d1e;
     border-left: 1px solid #2c2d2d1e;
-    border-bottom: 2px solid #08090B;
-    width: 101%;
-    transform: translateY(-100%);
-    opacity: 0;
-    animation: hero-header-slide 1.4s ease-out forwards,
-        hero-header-blur 2s ease-in-out forwards;
+    width: 100%;
 }
 
 /* set keyframes for hero header top */

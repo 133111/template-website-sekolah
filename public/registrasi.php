@@ -41,7 +41,7 @@ include_once __DIR__ . '/../controllers/register-config.php' ;
 <div class="main-wrapper">
     <aside class="main-content-card">
         <div class="container container-register">
-            <div class="header-text">
+            <div class="header-text relative !top-2">
                 <div class="foto-wrap-registerPage">
                     <img src="../view/assets/logo2rev.png" alt="Logo Sekolah">
                 </div>
@@ -49,7 +49,7 @@ include_once __DIR__ . '/../controllers/register-config.php' ;
                 <p style="font-family: 'Sora', 'Plus Jakarta Sans', sans-serif;">Silahkan lakukan pendaftaran</p>
             </div>
     
-            <form action="" method="POST">
+            <form action="" method="POST" class="relative !bottom-3">
                 <div class="input-box">
                     <label for="username" class="font-medium">Username</label>
                     <div class="svg-apply">
@@ -95,10 +95,9 @@ include_once __DIR__ . '/../controllers/register-config.php' ;
                     <div class="ring-card1 w-[45%] h-[45%] rounded-full border-none bg-[rgba(237,236,236,0.096)] absolute opacity-75 bottom-[70%] left-[75%] z-5"></div>
                     <div class="ring-card1 w-[24%] h-[25%] rounded-full border-none bg-[rgba(237,236,236,0.096)] absolute opacity-75 top-[10%] right-[85%] z-5"></div>
                     <div class="ring-card1 w-[38%] h-[39%] rounded-full border-none bg-[rgba(237,236,236,0.096)] absolute opacity-75 top-[110%] right-[80%] z-5"></div>
-                    <div class="linear-line w-[2px] h-[45%] border-none bg-[rgba(237,236,236,0.096)] absolute opacity-75 top-[45%] left-[11%] z-1"></div>
+                    <div class="linear-line w-[2px] !h-[60%] border-none bg-[rgba(237,236,236,0.096)] absolute opacity-75 top-[30%] left-[11%] z-1"></div>
                     <h4 class="font-semibold z-10">Selamat Datang!</h4>
-                    <h6 class="relative text-[13px] opacity-80">Daftar untuk kelola manajemen sekolah dengan mudah dan efisien</h6>
-                    <div class="kartu-login-info flex flex-col gap-6 w-full h-[250px] relative top-[1rem]">
+                    <div class="kartu-login-info flex flex-col gap-5 w-full h-[250px] relative top-[1rem]">
                         <div class="kartu-ke w-full h-[45%] rounded-[12px]">
                             <div class="carder w-full h-[4.2rem] rounded-[12px] text-[12px]">
                                 <div class="katalog relative flex flex-col justify-center h-full w-full" style="padding-left:60px;">
@@ -128,7 +127,7 @@ include_once __DIR__ . '/../controllers/register-config.php' ;
                                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H19a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H6.5a1 1 0 0 1 0-5H20"/></svg>
                                     </div>    
                                     <strong class="text-start text-[14px]">Mulai Kelola</strong>
-                                    <p class="text-start">Akses Penuh Admin ke Dashboard utama</p>
+                                    <p class="text-start">Akses Penuh ke Dashboard</p>
                                 </div>
                             </div>
                         </div>

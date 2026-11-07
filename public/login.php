@@ -96,7 +96,6 @@ include __DIR__ . '/../controllers/login-config.php';
                     <div class="ring-card1 w-[24%] h-[25%] rounded-full border-none bg-[rgba(237,236,236,0.096)] absolute opacity-75 top-[10%] right-[85%] z-5"></div>
                     <div class="ring-card1 w-[38%] h-[39%] rounded-full border-none bg-[rgba(237,236,236,0.096)] absolute opacity-75 top-[110%] right-[80%] z-5"></div>
                     <h4 class="font-semibold z-10">Hello, Administrator!</h4>
-                    <h6 class="relative text-[13px] opacity-80">Kelola manajemen sekolah dengan mudah dan efisien</h6>
                     <div class="kartu-login-info flex flex-col gap-6 w-full h-[250px] relative top-[1rem]">
                         <div class="kartu-ke w-full h-[45%] rounded-[12px]">
                             <div class="carder w-full h-[4.2rem] rounded-[12px] text-[12px]">
