@@ -181,7 +181,7 @@ define("BASE_URL", "/Raihan-PHP/MATERI PHP/materi_php_sandhika/PERTEMUAN 18/proj
                         <p class="text-black-500/70">Berita seputar kegiatan, acara, dan pengumuman sekolah.</p>
                     </div>
                     <div class="article-card flex relative top-8 justify-between gap-2">
-                        <article class="article bg-[#FFFEFE] !h-[450px] !w-[80%] rounded-[24px] !mr-[1.4rem]">
+                        <article class="article bg-[#FFFEFE] !h-[450px] !w-[80%] rounded-[24px] !mr-[1.4rem] shadow-[-2px_3px_7px_#08090B]">
                             <div class="news-container h-[45%] w-full bg-purple-500 rounded-t-[24px] relative !overflow-hidden">
                                 <img src="../../view/assets/SISWA-SMA-hgfnhfn.jpg" alt="#" class="w-full h-full ">
                             </div>

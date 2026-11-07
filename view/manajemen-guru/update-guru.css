@@ -123,3 +123,64 @@
     transform: translateY(1px);
     box-shadow: 1px 1px 2px 1px rgba(19, 19, 19, 0.275);
 }
+
+/* Form layout stabilization */
+.container2 {
+    width: calc(100% - 32px);
+    max-width: 100%;
+    min-width: 0;
+}
+
+.container2 .input-content {
+    min-width: 0;
+}
+
+.container2 .input-content input,
+.container2 .input-content select,
+.container2 .input-content textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.container2 .input-content img {
+    max-width: 125px;
+    height: 125px;
+}
+
+.button-submit-update {
+    flex-wrap: wrap;
+}
+
+.button-submit-update a,
+.button-submit-update button {
+    width: auto;
+    min-width: 110px;
+    min-height: 38px;
+}
+
+@media (max-width: 640px) {
+    .container2 {
+        width: calc(100% - 24px);
+        margin-left: 12px;
+        margin-right: 12px;
+        padding: 14px;
+    }
+
+    .container2 .input-content img {
+        left: 0;
+        bottom: 0;
+        margin: 12px auto;
+        display: block;
+    }
+
+    .button-submit-update {
+        justify-content: stretch;
+    }
+
+    .button-submit-update a,
+    .button-submit-update button {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+}

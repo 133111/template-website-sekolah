@@ -423,6 +423,7 @@ html{
     font-family: var(--font-type);
     background-color: var(--background-main);
     padding : 12px 30px 12px 30px;
+    
     border-radius: 30px;
     width: 30%;
     height: 100%;

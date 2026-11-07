@@ -40,8 +40,8 @@ if(isset($_POST["submit"])){
 <!-- call components main grid bellow -->
     <?php include_once __DIR__ . '/../../components/main-frame/frame-grid.php';?>
 
-    <!-- Modal Profile Result (Neobrutalism) -->
-    <div id="modal-profile" class="main-modal-profile hidden fixed flex items-center justify-center inset-0 z-[100]">
+    <!-- Modal Profile Result -->
+    <div id="modal-profile" class="main-modal-profile !hidden fixed flex items-center justify-center inset-0 z-[100]">
         <div class="main-content-modal-profile">
             <div class="modal-header-neo">
                 <div id="profile-icon-badge" class="modal-icon-badge success">

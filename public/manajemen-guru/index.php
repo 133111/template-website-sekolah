@@ -263,14 +263,20 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
         <div class="wrapper-hero-header">
             <div class="float-not">
                 <div class="hero-header">
-                    <div class="content-hero-header">
+                    <div class="content-hero-header flex justify-between gap-2"">
                         <div class="hero-header-se1">
                             <div id="toggle-sidebar" class="svg-1 relative left-[4px] border border-[#08090B] shadow-[-2px_2px_#08090B] hover:bg-[rgba(239,232,239,0.8)] cursor-pointer">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                     <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75H12a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
                                 </svg>
                             </div>
-                            <h3 class="text-[1.2rem] relative font-semibold left-2">Main Dashboard</h3>
+                        </div>
+                        <div class="pointerPage flex w-[220px] flex items-center gap-2">
+                            <h3 class="text-[16px] relative font-semibold left-2">Dashboard</h3>
+                            <span class="relative left-1">
+                                <svg class="size-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
+                            </span>
+                            <p class="font-medium hover:text-[#08090B] transition-all duration-300 cursor-pointer">Guru</p>
                         </div>
                     </div>
                     <div class="account-hero-header">

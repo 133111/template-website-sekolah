@@ -142,25 +142,31 @@
 
 <!-- main container-->
     <div class="container">
-        <div class="wrapper-hero-header">
+         <div class="wrapper-hero-header">
             <div class="float-not">
                 <div class="hero-header">
-                    <div class="content-hero-header">
+                    <div class="content-hero-header flex justify-between gap-2">
                         <div class="hero-header-se1">
                             <div id="toggle-sidebar" class="svg-1 relative left-[4px] border border-[#08090B] shadow-[-2px_2px_#08090B] hover:bg-[rgba(239,232,239,0.8)] cursor-pointer">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                     <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75H12a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
                                 </svg>
                             </div>
-                            <h3 class="text-[1.2rem] relative font-semibold left-2">Main Dashboard </h3>
+                        </div>
+                        <div class="pointerPage flex w-[220px] flex items-center gap-2">
+                            <h3 class="text-[16px] relative font-semibold left-2">Dashboard</h3>
+                            <span class="relative left-1">
+                                <svg class="size-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
+                            </span>
+                            <p class="font-medium hover:text-[#08090B] transition-all duration-300 cursor-pointer">Siswa</p>
                         </div>
                     </div>
                     <div class="account-hero-header">
                         <div class="notif-icons-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" width="25">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#08090B" class="size-6" width="25">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
                             </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" width="25">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#08090B" class="size-6" width="25">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
                             </svg>
                         </div>
@@ -168,7 +174,7 @@
                             <div id="main-menu" class="main-menu flex">
                                 <div class="main-img-hero-header flex justify-center items-center relative border border-[#08090B] shadow-[-2px_2px_#08090B] relative right-[5px] rounded-[25px]">
                                     <div class="img-profileOnHeader w-[45px] text-center">
-                                        <strong class="text-[26px] text-[#08090B]"><?= strtoupper(substr($dataAdmin["username"] ?? "?", 0, 1)) ;?></strong>
+                                        <strong class="text-[26px] text-[#08090B]"><?= strtoupper(substr($dataAdmin["username"] ?? "Admin", 0, 1)) ;?></strong>
                                     </div>
                                 </div>
                                 <div class="hero-text-img">
@@ -186,10 +192,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="sub-menu" class="hidden sub-menu absolute top-[3.5rem] left-4 z-20 bg-[#FFFEFE] rounded-b-[8px] w-[90%] h-[35px]">
+                            <div id="sub-menu" class="sub-menuMain1 hidden sub-menu absolute top-[3.4rem] left-[20%] z-20 bg-[#FFFEFE] !backdrop-blur rounded-b-[8px] shadow-[-2px_3px_#08090B] w-[80%] h-[30px]">
                                 <div class="main-logout-svg flex justify-between items-center relative right-[1%]">
                                     <a href="logout.php" class="flex justify-start items-center relative top-2 w-full h-full p-2">
-                                       <svg xmlns="http://www.w3.org/2000/svg" class="relative left-3" width="16" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                                       <svg xmlns="http://www.w3.org/2000/svg" class="relative left-3" width="16" height="18" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
                                        <p class="text-[11px] text-red-600 relative left-4 font-semibold ">Log out</p>
                                     </a>
                                 </div>
