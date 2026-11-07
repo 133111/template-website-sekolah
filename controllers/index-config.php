@@ -39,7 +39,7 @@ $result = mysqli_query($conn, "SELECT * FROM users ORDER BY id DESC");
     }
     $totalAdmin = count($admin);
 
-//pagination configure  :
+//pagination configure set  :
 //init  :
 $dataPerPage = (int) 15;
     $totalNavigate = (int) ceil(($semuaData/$dataPerPage)); //navigate totals
@@ -54,8 +54,5 @@ $allData2= query("SELECT * FROM mahasiswa ORDER BY id DESC LIMIT $firstData, $da
 if(isset($_POST["cari"])){
     $mahasiswa = search($_POST["keyword"]); // put keyword from input here
 }
-
-//add pagination feature soon (may on 6/07/26)
-
 
 ?>
