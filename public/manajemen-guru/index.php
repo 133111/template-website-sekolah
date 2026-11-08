@@ -457,12 +457,28 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                             </div>
 
                             <!-- Card Status Sekolah -->
-                            <div class="kartu-1 w-[50%] h-[96%] !p-2 rounded-[12px] overflow-hidden relative flex flex-col border-1 gap-2">
-                                <div class="heroTextCanvas">
-                                    <h2 class="text-[13px] font-semibold">Grafik Manajemen</h2>
+                            <div class="kartu-1 w-[50%] h-[96%] !p-2 rounded-[12px] overflow-hidden relative flex flex-col border-1 gap-2 !bg-[#FFFEFE]">
+                                <div class="heroTextCanvas relative top-2 border-b border-[#08090b40] !p-1">
+                                    <div class="wrapperSvg flex items-center gap-1 relative bottom-2">
+                                        <div class="wrapperSvgChart bg-[#60A5FA] !p-2 rounded-full">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-contract"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 21h-2a3 3 0 0 1 -3 -3v-1h5.5" /><path d="M17 8.5v-3.5a2 2 0 1 1 2 2h-2" /><path d="M19 3h-11a3 3 0 0 0 -3 3v11" /><path d="M9 7h4" /><path d="M9 11h4" /><path d="M18.42 12.61a2.1 2.1 0 0 1 2.97 2.97l-6.39 6.42h-3v-3l6.42 -6.39" /></svg>
+                                        </div>    
+                                        <div class="textChartHeroHeader flex flex-col">
+                                            <h2 class="text-[15px] font-semibold">Grafik Manajemen</h2>
+                                            <p class="text-[11px]">Total aktivitas admin hari ini </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <canvas id="graphCrud-guru" class="!w-[70%] !h-[60%] relative left-18 top-6"> <!-- chart.js -->
-                                </canvas>
+                                <div class="wrapperMainChart-feature h-full">
+                                    <canvas id="graphCrud-guru" class="!w-[130px] !h-[120px] relative left-18 top-6 relative"> <!-- chart.js --></canvas>
+                                    <div class="contentAbsolute-chart absolute bottom-[35%] left-[42%] rounded-full w-[75px] h-[65px] !z-40 flex flex-col text-center">
+                                        <p class="text-[11px] font-light h-[30%] relative top-2">Total</p>
+                                        <h4 class="font-semibold text-[26px] h-[50%]">16</h4>
+                                    </div>
+                                    <span class="absolute left-[75%] top-[75%] z-50 w-[60px] h-[30px] text-[10px] !font-medium">Data Baru 10</span>
+                                    <span class="absolute left-[12%] top-[35%] z-50 w-[60px] h-[30px] text-[10px] !font-medium">Data Hapus 5</span>
+                                    <span class="absolute left-[15%] top-[70%] z-50 w-[60px] h-[30px] text-[10px] !font-medium">Data Ubah 5</span>
+                                </div>
                             </div>
                         </div>
                     </div>

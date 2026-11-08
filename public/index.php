@@ -709,7 +709,7 @@ $id = $_SESSION["admin_account"] ?? '0';
                             <?php $i = 1; ?>
                             <?php foreach($mahasiswa as $mhs):?>
                             <tr class="hover:bg-[rgba(8,9,11,0.05)] transition-all duration-300 ease-out cursor-pointer">
-                                <td style="opacity : 0.7; color:black; font-size:14px;" class="flex justify-center items-center relative top-[15px] font-semibold"><?= $i ;?></td>
+                                <td style="opacity : 0.7; color:black; font-size:14px;" class="flex justify-center items-center relative top-[15px] font-semibold">#<?= $i ;?></td>
                                 <td>
                                     <div class="img-behind w-fit rounded-full">
                                         <img class="!rounded-full" src="../asset/<?= $mhs["gambar"]?>" width="40">

@@ -23,7 +23,7 @@ if(mainCanvas){
             if(typeof data !== undefined && data && data !== null){
             new Chart(mainCanvas, {
                 //parameter
-                type: 'pie',
+                type: 'doughnut',
                 data: {
                     labels: keys, 
                     datasets: [{
@@ -36,6 +36,8 @@ if(mainCanvas){
                             neoColors.delete
                         ],
                         borderColor: neoColors.border,
+                        spacing: 8,
+                        borderRadius: 9,
                         borderWidth: 4,
                         color: '#334155',
                         font: {
