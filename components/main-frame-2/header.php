@@ -1,5 +1,5 @@
 
-    <link rel="stylesheet" href="../view/component-target/main-frame/index.css"><!--style connect -->
+    <link rel="stylesheet" href="<?= BASE_URL ?>/view/component-target/main-frame/index.css"><!--style connect -->
     <!-- Import Font Inter & Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

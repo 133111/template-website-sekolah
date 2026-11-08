@@ -1,7 +1,7 @@
 <?php 
 // ----------> Call Controllers Bellow<----------
 require_once __DIR__ . '/../controllers/update-config.php';
-define("BASE_URL", "/Raihan-PHP/MATERI PHP/materi_php_sandhika/PERTEMUAN 18/project");
+define("BASE_URL", "/school-dashboard-template"); //set const
 
 if(isset($_SESSION["status_update"])){
     $dataNew = $_SESSION["status_update"];

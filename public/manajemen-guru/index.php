@@ -91,6 +91,7 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../dist/output.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- chart of crud statistic -->
 </head>
 
 <body>
@@ -163,7 +164,7 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                                     <path d="M3.375 3C2.339 3 1.5 3.84 1.5 4.875v.75c0 1.036.84 1.875 1.875 1.875h17.25c1.035 0 1.875-.84 1.875-1.875v-.75C22.5 3.839 21.66 3 20.625 3H3.375Z" />
                                     <path fill-rule="evenodd" d="m3.087 9 .54 9.176A3 3 0 0 0 6.62 21h10.757a3 3 0 0 0 2.995-2.824L20.913 9H3.087Zm6.163 3.75A.75.75 0 0 1 10 12h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
                                 </svg>
-                                <p style="display:flex; align-items:center;">Manajemen Guru</p>
+                                <p style="display:flex; align-items:center;" class="!font-['poppins', sans-serif]">Manajemen Guru</p>
                             </div>
                         </a>
                     </div>
@@ -263,14 +264,20 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
         <div class="wrapper-hero-header">
             <div class="float-not">
                 <div class="hero-header">
-                    <div class="content-hero-header">
+                    <div class="content-hero-header flex justify-between gap-2"">
                         <div class="hero-header-se1">
                             <div id="toggle-sidebar" class="svg-1 relative left-[4px] border border-[#08090B] shadow-[-2px_2px_#08090B] hover:bg-[rgba(239,232,239,0.8)] cursor-pointer">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                     <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75H12a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
                                 </svg>
                             </div>
-                            <h3 class="text-[1.2rem] relative font-semibold left-2">Main Dashboard</h3>
+                        </div>
+                        <div class="pointerPage flex w-[220px] flex items-center gap-2">
+                            <h3 class="text-[16px] relative font-semibold left-2">Dashboard</h3>
+                            <span class="relative left-1">
+                                <svg class="size-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
+                            </span>
+                            <p class="font-medium hover:text-[#08090B] transition-all duration-300 cursor-pointer">Guru</p>
                         </div>
                     </div>
                     <div class="account-hero-header">
@@ -321,15 +328,15 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
         <!-- Main Content Body -->
         <div class="main-content">
             <div class="hyperlinkOverview w-full h-[75px] relative left-4 bottom-2 gap-4 !font-poppins">
-                <div class="mainContentOverview h-[60%] w-[30%] ">
-                    <h2 class="text-[28px] font-medium">Manajemen Guru</h2>
+                <div class="mainContentOverview h-[50%] w-[30%] ">
+                    <h2 class="text-[24px] font-medium">Manajemen Guru</h2>
                 </div>
-                <div class="paragraph h-[40%] w-[30%]">
-                    <p class="text-[16px]">Halaman Manajemen Data Guru</p>
+                <div class="paragraph h-[40%] w-[80%]">
+                    <p class="text-[14px]">Halaman menu manajemen guru, mengatur data guru sekolah.</p>
                 </div>
             </div>
             <!-- Items Card Above Search Bar --> 
-            <div class="wrapper-allitems w-full flex justify-center relative bottom-1">
+            <div class="wrapper-allitems w-full flex justify-center relative bottom-2">
                 <div class="all-items flex justify-center items-center w-[95%] gap-[5px]">
                     <div class="card-section-items">
                         <div class="first-section">
@@ -450,12 +457,28 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                             </div>
 
                             <!-- Card Status Sekolah -->
-                            <div class="kartu-1 w-[50%] h-[96%] !p-2 rounded-[12px] overflow-hidden relative flex flex-col border-1 gap-2">
-                                <div class="heroTextCanvas">
-                                    <h2 class="text-[13px] font-semibold">Grafik Manajemen</h2>
+                            <div class="kartu-1 w-[50%] h-[96%] !p-2 rounded-[12px] overflow-hidden relative flex flex-col border-1 gap-2 !bg-[#FFFEFE]">
+                                <div class="heroTextCanvas relative top-2 border-b border-[#08090b40] !p-1">
+                                    <div class="wrapperSvg flex items-center gap-1 relative bottom-2">
+                                        <div class="wrapperSvgChart bg-[#60A5FA] !p-2 rounded-full">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-contract"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 21h-2a3 3 0 0 1 -3 -3v-1h5.5" /><path d="M17 8.5v-3.5a2 2 0 1 1 2 2h-2" /><path d="M19 3h-11a3 3 0 0 0 -3 3v11" /><path d="M9 7h4" /><path d="M9 11h4" /><path d="M18.42 12.61a2.1 2.1 0 0 1 2.97 2.97l-6.39 6.42h-3v-3l6.42 -6.39" /></svg>
+                                        </div>    
+                                        <div class="textChartHeroHeader flex flex-col">
+                                            <h2 class="text-[15px] font-semibold">Grafik Manajemen</h2>
+                                            <p class="text-[11px]">Total aktivitas admin hari ini </p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <canvas id="graphCrud-guru" class="w-full h-[15rem] bg-green-400"> <!-- chart.js -->
-                                </canvas>
+                                <div class="wrapperMainChart-feature h-full">
+                                    <canvas id="graphCrud-guru" class="!w-[130px] !h-[120px] relative left-18 top-6 relative"> <!-- chart.js --></canvas>
+                                    <div class="contentAbsolute-chart absolute bottom-[35%] left-[42%] rounded-full w-[75px] h-[65px] !z-40 flex flex-col text-center">
+                                        <p class="text-[11px] font-light h-[30%] relative top-2">Total</p>
+                                        <h4 class="font-semibold text-[26px] h-[50%]">16</h4>
+                                    </div>
+                                    <span class="absolute left-[75%] top-[75%] z-50 w-[60px] h-[30px] text-[10px] !font-medium">Data Baru 10</span>
+                                    <span class="absolute left-[12%] top-[35%] z-50 w-[60px] h-[30px] text-[10px] !font-medium">Data Hapus 5</span>
+                                    <span class="absolute left-[15%] top-[70%] z-50 w-[60px] h-[30px] text-[10px] !font-medium">Data Ubah 5</span>
+                                </div>
                             </div>
                         </div>
                     </div>

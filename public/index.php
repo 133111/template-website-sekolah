@@ -230,14 +230,20 @@ $id = $_SESSION["admin_account"] ?? '0';
         <div class="wrapper-hero-header">
             <div class="float-not">
                 <div class="hero-header">
-                    <div class="content-hero-header">
+                    <div class="content-hero-header flex justify-between gap-2">
                         <div class="hero-header-se1">
                             <div id="toggle-sidebar" class="svg-1 relative left-[4px] border border-[#08090B] shadow-[-2px_2px_#08090B] hover:bg-[rgba(239,232,239,0.8)] cursor-pointer">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                                     <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75H12a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
                                 </svg>
                             </div>
-                            <h3 class="text-[1.2rem] relative font-semibold left-2">Main Dashboard </h3>
+                        </div>
+                        <div class="pointerPage flex w-[220px] flex items-center gap-2">
+                            <h3 class="text-[16px] relative font-semibold left-2">Dashboard</h3>
+                            <span class="relative left-1">
+                                <svg class="size-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
+                            </span>
+                            <p class="font-medium hover:text-[#08090B] transition-all duration-300 cursor-pointer">Siswa</p>
                         </div>
                     </div>
                     <div class="account-hero-header">
@@ -259,12 +265,12 @@ $id = $_SESSION["admin_account"] ?? '0';
                                 <div class="hero-text-img">
                                     <div class="main-hero-text-img">
                                         <p class="font-semibold flex items-center">SMK N 1 NGAWI 
-                                        <span class="flex items-center relative top-1 left-[3px]">
-                                            <svg class="w-[20px] h-[20px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                            </svg>
-                                        </span>
-                                    </p>
+                                            <span class="flex items-center relative top-1 left-[3px]">
+                                                <svg class="w-[20px] h-[20px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                                                </svg>
+                                            </span>
+                                        </p>
                                     </div>
                                     <div class="second-hero-text-img">
                                         <p>Administrator</p>
@@ -310,7 +316,7 @@ $id = $_SESSION["admin_account"] ?? '0';
                     </div>
                     <div class="card-of-wrapper-text-header w-[25%] rounded-[1rem] h-[7rem] overflow-hidden z-30 relative right-[1%]">
                         <div class="content-wrapper-1 flex justify-between">
-                            <div class="tanggal-wrapper relative bg-[#FDE047] transition-all duration-300 ease-in-out shadow-[2px_3px_#08090B] hover:shadow-[1px_2px_#08090B] rounded-[8px] flex justify-center items-center border border-[#08090B] p-[8px] w-[40%] h-[1.6rem]  relative left-[8%] top-[11px]">
+                            <div class="tanggal-wrapper relative bg-[#FDE047] transition-all duration-300 ease-in-out shadow-[2px_3px_#08090B] hover:shadow-[1px_1px_13px_rgba(8,9,11,0.08)] rounded-[8px] flex justify-center items-center border border-[#08090B] p-[8px] w-[40%] h-[1.6rem]  relative left-[8%] top-[11px]">
                                 <p class="text-center h-full w-full text-[11px] font-semibold opacity-85">LOG TIME</p>
                             </div>
                             <div class="tanggal-text-wrapper flex items-center relative right-[10%] top-[11px] text-[13px] opacity-75">
@@ -703,7 +709,7 @@ $id = $_SESSION["admin_account"] ?? '0';
                             <?php $i = 1; ?>
                             <?php foreach($mahasiswa as $mhs):?>
                             <tr class="hover:bg-[rgba(8,9,11,0.05)] transition-all duration-300 ease-out cursor-pointer">
-                                <td style="opacity : 0.7; color:black; font-size:14px;" class="flex justify-center items-center relative top-[15px] font-semibold"><?= $i ;?></td>
+                                <td style="opacity : 0.7; color:black; font-size:14px;" class="flex justify-center items-center relative top-[15px] font-semibold">#<?= $i ;?></td>
                                 <td>
                                     <div class="img-behind w-fit rounded-full">
                                         <img class="!rounded-full" src="../asset/<?= $mhs["gambar"]?>" width="40">
