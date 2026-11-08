@@ -20,9 +20,9 @@ if(!isset($_SESSION["tanggal_crud"])){
     $_SESSION["log_update"] = 0;
     $_SESSION["log_delete"] = 0;
 
-    $_SESSION["clock-insert"] = "nothing";
-    $_SESSION["clock-delete"] = "nothing";
-    $_SESSION["clock-update"] = "nothing";
+    $_SESSION["clock-insert"] = "00:00:00";
+    $_SESSION["clock-delete"] = "00:00:00";
+    $_SESSION["clock-update"] = "00:00:00";
 }
 $active = $_GET["page"] ?? $_GET["page"] = 1 ;
 // helpers caller

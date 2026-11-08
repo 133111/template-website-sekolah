@@ -91,6 +91,7 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../dist/output.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- chart of crud statistic -->
 </head>
 
 <body>
@@ -163,7 +164,7 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                                     <path d="M3.375 3C2.339 3 1.5 3.84 1.5 4.875v.75c0 1.036.84 1.875 1.875 1.875h17.25c1.035 0 1.875-.84 1.875-1.875v-.75C22.5 3.839 21.66 3 20.625 3H3.375Z" />
                                     <path fill-rule="evenodd" d="m3.087 9 .54 9.176A3 3 0 0 0 6.62 21h10.757a3 3 0 0 0 2.995-2.824L20.913 9H3.087Zm6.163 3.75A.75.75 0 0 1 10 12h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
                                 </svg>
-                                <p style="display:flex; align-items:center;">Manajemen Guru</p>
+                                <p style="display:flex; align-items:center;" class="!font-['poppins', sans-serif]">Manajemen Guru</p>
                             </div>
                         </a>
                     </div>
@@ -327,15 +328,15 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
         <!-- Main Content Body -->
         <div class="main-content">
             <div class="hyperlinkOverview w-full h-[75px] relative left-4 bottom-2 gap-4 !font-poppins">
-                <div class="mainContentOverview h-[60%] w-[30%] ">
-                    <h2 class="text-[28px] font-medium">Manajemen Guru</h2>
+                <div class="mainContentOverview h-[50%] w-[30%] ">
+                    <h2 class="text-[24px] font-medium">Manajemen Guru</h2>
                 </div>
-                <div class="paragraph h-[40%] w-[30%]">
-                    <p class="text-[16px]">Halaman Manajemen Data Guru</p>
+                <div class="paragraph h-[40%] w-[80%]">
+                    <p class="text-[14px]">Halaman menu manajemen guru, mengatur data guru sekolah.</p>
                 </div>
             </div>
             <!-- Items Card Above Search Bar --> 
-            <div class="wrapper-allitems w-full flex justify-center relative bottom-1">
+            <div class="wrapper-allitems w-full flex justify-center relative bottom-2">
                 <div class="all-items flex justify-center items-center w-[95%] gap-[5px]">
                     <div class="card-section-items">
                         <div class="first-section">
@@ -460,7 +461,7 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                                 <div class="heroTextCanvas">
                                     <h2 class="text-[13px] font-semibold">Grafik Manajemen</h2>
                                 </div>
-                                <canvas id="graphCrud-guru" class="w-full h-[15rem] bg-green-400"> <!-- chart.js -->
+                                <canvas id="graphCrud-guru" class="!w-[70%] !h-[60%] relative left-18 top-6"> <!-- chart.js -->
                                 </canvas>
                             </div>
                         </div>
