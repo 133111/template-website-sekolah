@@ -7,6 +7,18 @@ if(!isset($_SESSION["login"])){
     exit;
 }
 
+//define session
+$date = date("d M Y");
+if(!$_SESSION["tanggal_crud"]){
+    $_SESSION["tanggal_crud"] = $today ; //reset after 24h
+    $_SESSION["guru_add"] = 0 ;
+    $_SESSION["guru_delete"] = 0 ;
+    $_SESSION["guru_update"] = 0 ;
+    //clock operate
+    $_SESSION["clock_insert_guru"] = 0; 
+    $_SESSION["clock_update_guru"] = 0; 
+    $_SESSION["clock_delete_guru"] = 0; 
+}
 // ----------> Call config/functions Bellow<----------
 require_once __DIR__ . '/../../config/functions.php';
 class Guru{
