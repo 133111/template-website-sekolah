@@ -18,52 +18,53 @@ if(mainCanvas){
             const res = await data.json();
             const keys = Object.keys(res); //key 
             const total = Object.values(res); //value
-            console.log(`keys: ${keys}
-                         total: ${total}`);
             if(typeof data !== undefined && data && data !== null){
-            new Chart(mainCanvas, {
-                //parameter
-                type: 'doughnut',
-                data: {
-                    labels: keys, 
-                    datasets: [{
-                        fill : true,
-                        label: 'Jumlah Operasi Dalam 24 Jam',
-                        data: total, //contains data
-                        backgroundColor: [
-                            neoColors.create,
-                            neoColors.update, 
-                            neoColors.delete
-                        ],
-                        borderColor: neoColors.border,
-                        spacing: 8,
-                        borderRadius: 9,
-                        borderWidth: 4,
-                        color: '#334155',
-                        font: {
-                            family: "'Space Grotesk', sans-serif", 
-                            size: 13,                     
-                            weight: '500'
-                        }
-                        }]
-                },
-                options: {
-                    responsive: true, 
-                        plugins: {
-                            legend: {
-                                display: false 
+                const paramsChart = {
+                    //parameter
+                    type: 'doughnut',
+                    data: {
+                        labels: keys, 
+                        datasets: [{
+                            fill : true,
+                            label: 'Jumlah Operasi Dalam 24 Jam',
+                            data: total, //contains data
+                            backgroundColor: [
+                                neoColors.create,
+                                neoColors.update, 
+                                neoColors.delete
+                            ],
+                            borderColor: neoColors.border,
+                            spacing: 8,
+                            borderRadius: 9,
+                            borderWidth: 4,
+                            color: '#334155',
+                            font: {
+                                family: "'Space Grotesk', sans-serif", 
+                                size: 13,                     
+                                weight: '500'
                             }
+                            }]
                     },
-                    scales: {
-                        y: {
-                            display: false
+                    options: {
+                        responsive: true, 
+                            plugins: {
+                                legend: {
+                                    display: false 
+                                }
                         },
-                        x: {
-                            display: false
+                        scales: {
+                            y: {
+                                display: false
+                            },
+                            x: {
+                                display: false
+                            }
                         }
                     }
-                }
-                });
+                };
+                //set instance
+                let mainCtx = new Chart(mainCanvas, paramsChart); // -> main place && data to build
+                if(!mainCtx) throw new Error(`chartError`);
             };
         }catch(err){
             console.warn(`error message: ${err.message}`);
