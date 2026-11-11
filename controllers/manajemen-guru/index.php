@@ -7,7 +7,7 @@ if(!isset($_SESSION["login"])){
     exit;
 }
 
-//define session
+//define session -> master session guru page
 $date = date("d M Y");
 if(!$_SESSION["tanggal_crud"]){
     $_SESSION["tanggal_crud"] = $today ; //reset after 24h

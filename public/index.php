@@ -1,6 +1,6 @@
 <?php 
 //helpers call
-include_once __DIR__ . '/../public/routes.php';
+include_once __DIR__ . '/../public/routes.php'; //routing path
 require_once __DIR__ . '/../controllers/delete-config.php';
 require_once __DIR__ . '/../config/functions.php'; //helpers 
 // ----------> Call Controllers Bellow<----------
@@ -257,7 +257,7 @@ $id = $_SESSION["admin_account"] ?? '0';
                         </div>
                         <div class="account-img-hero-header cursor-pointer rounded-full transition-colors duration-400 ease-in-out">
                             <div id="main-menu" class="main-menu flex">
-                                <div class="main-img-hero-header flex justify-center items-center relative border border-[#08090B] shadow-[-2px_2px_#08090B] relative right-[5px] rounded-[25px]">
+                                <div class="main-img-hero-header flex justify-center items-center relative border border-[#08090B] shadow-[-2px_2px_#08090B] bg-[#4ADE80] relative right-[5px] rounded-[25px]">
                                     <div class="img-profileOnHeader w-[45px] text-center">
                                         <strong class="text-[26px] text-[#08090B]"><?= strtoupper(substr($dataAdmin["username"] ?? "Admin", 0, 1)) ;?></strong>
                                     </div>
