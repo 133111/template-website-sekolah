@@ -538,13 +538,13 @@ $id = $_SESSION["admin_account"] ?? '0';
                                     </div>
                                     <div class="card-of-1 overflow-hidden bg-[rgba(238,234,234,0.180)] text-black text-[14px] px-[6px] flex items-center h-[35%] w-[90%] rounded-[8px]">
                                         <div class="wrapper-bg-svg bg-[#22C55E] shadow-[-1px_2px_#08090B] relative left-[5%] w-[2rem] h-[75%] border border-[#08090B] rounded-[6px] flex justify-center items-center">
-                                            <svg class="w-[20px] h-[20px] text-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#08090B">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                            <svg class="w-[20px] h-[20px] text-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="size-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0 3 3m-3-3-3 3M6.75 19.5a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z" />
                                             </svg>
                                         </div>
                                         <div class="card-info-wrap flex flex-col">
-                                            <strong class="text-black text-start text-[13px] relative left-[1rem] top-[2px]">Success</strong>
-                                            <p class="text-black text-[10px] text-start relative left-[1rem] bottom-[2px] opacity-85">Operasi berjalan sukses</p>    
+                                            <strong class="text-black text-start text-[13px] relative left-[1rem] top-[2px]"><?= $_SESSION["status_main"] ?? "belum ada";?></strong>
+                                            <p class="text-black text-[10px] text-start relative left-[1rem] bottom-[2px] opacity-85">Last operate <span><?= $_SESSION["status_main"] ?? "belum ada"?></span></p>    
                                         </div>
                                     </div>
                                 </div>
