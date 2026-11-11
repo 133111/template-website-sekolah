@@ -34,11 +34,14 @@ if(isset($pm_post["submit"])){  //if submit has "submit"
        //inisialisasi argumen fungsi
     if(tambah($pm_post) > 0){ //inisialisasi fungsi dan argumen untuk parameter langsung di dalam if
         //$pm_post sebagai argumen dari parameter $datainsert    
+        unset($_SESSION["status_main"]);
         $_SESSION["log_create"] += 1;
         $_SESSION["clock-insert"] = $timestamp;
         $_SESSION["insert_status"] = 'true';
+        $_SESSION["status_main"] = "success";
     }else{
         $_SESSION["insert_status"] = 'false';
+        $_SESSION["status_main"] = "error";
     }
 }
 

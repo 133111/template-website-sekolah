@@ -32,10 +32,13 @@ $timestamp = date("H:i:s");
 if(isset($_POST["submit"])){  
     if(update($_POST) > 0){ 
         $_SESSION["log_update"] += 1 ;
+        unset($_SESSION["status_main"]);
         $_SESSION["clock-update"] = $timestamp;
         $_SESSION["status_update"] = 'sukses' ;
+        $_SESSION["status_main"] = "success";
     }else{
         $_SESSION["status_update"] = 'gagal' ;
+        $_SESSION["status_main"] = "error";
     }
 }
 

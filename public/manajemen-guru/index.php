@@ -291,7 +291,7 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                         </div>
                         <div class="account-img-hero-header cursor-pointer rounded-full transition-colors duration-400 ease-in-out">
                             <div id="main-menu" class="main-menu flex">
-                                <div class="main-img-hero-header flex justify-center items-center relative border border-[#08090B] shadow-[-2px_2px_#08090B] relative right-[5px] rounded-[25px]">
+                                <div class="main-img-hero-header flex justify-center items-center bg-[#4ADE80] relative border border-[#08090B] shadow-[-2px_2px_#08090B] relative right-[5px] rounded-[25px]">
                                     <div class="img-profileOnHeader w-[45px] text-center">
                                         <strong class="text-[26px] text-[#08090B]"><?= strtoupper(substr($dataAdmin["username"] ?? "Admin", 0, 1)) ;?></strong>
                                     </div>
@@ -391,7 +391,7 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                     <div class="second-section-card-items p-2 rounded-[12px] overflow-hidden relative">
                         <div class="main-wrapper-section-card flex items-center gap-3 w-full h-full">
                             <!-- Card Status Manajemen -->
-                            <div class="kartu-1 w-[50%] h-[96%] rounded-[12px] overflow-hidden relative">
+                            <div class="kartu-1 w-[40%] h-[96%] rounded-[12px] overflow-hidden relative">
                                 <div class="konten-kartu1 h-full w-full !p-2">
                                     <h1 class="text-black font-bold text-[14px]">Status Manajemen</h1>
                                     <div class="day-status flex justify-between items-center mt-1">
@@ -406,7 +406,7 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                                                 </svg>
                                             </div>
                                             <div class="card-info-wrap flex justify-between w-full ml-2">
-                                                <div>
+                                                <div class="relative left-1">
                                                     <strong class="text-black text-[12px]">Create</strong>
                                                     <span class="text-black text-[9px] opacity-75 ml-1">Last: <?= $_SESSION["clock-insert"] ?? 'nothing'; ?></span> 
                                                 </div>   
@@ -420,7 +420,7 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                                                 </svg>
                                             </div>
                                             <div class="card-info-wrap flex justify-between w-full ml-2">
-                                                <div>
+                                                <div class="relative left-1">
                                                     <strong class="text-black text-[12px]">Delete</strong>
                                                     <span class="text-black text-[9px] opacity-75 ml-1">Last: <?= $_SESSION["clock-delete"] ?? 'nothing'; ?></span> 
                                                 </div>   
@@ -434,7 +434,7 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                                                 </svg>
                                             </div>
                                             <div class="card-info-wrap flex justify-between w-full ml-2">
-                                                <div>
+                                                <div class="relative left-1">
                                                     <strong class="text-black text-[12px]">Update</strong>
                                                     <span class="text-black text-[9px] opacity-75 ml-1">Last: <?= $_SESSION["clock-update"] ?? 'nothing'; ?></span> 
                                                 </div>   
@@ -448,7 +448,7 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                                                 </svg>
                                             </div>
                                             <div class="card-info-wrap flex justify-between w-full ml-2">
-                                                <strong class="text-black text-[12px]">Status</strong>
+                                                <strong class="text-black text-[12px] relative left-1">Status</strong>
                                                 <span class="text-emerald-700 font-semibold text-[10px]">Sistem Normal</span>
                                             </div>
                                         </div>

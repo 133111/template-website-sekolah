@@ -15,7 +15,9 @@ if(isset($_SESSION["role"]) && $_SESSION["role"] == "superadmin"){
 }// else $_SESSION["role"] = "user"
 $today = date("d M Y"); //realtime crud status
 if(!isset($_SESSION["tanggal_crud"])){
-    $_SESSION["tanggal_crud"] = $today;
+    //status main
+    $_SESSION["status_main"] = "belum ada";
+    $_SESSION["tanggal_crud"] = $today; //reset after 24h 
     $_SESSION["log_create"] = 0;
     $_SESSION["log_update"] = 0;
     $_SESSION["log_delete"] = 0;

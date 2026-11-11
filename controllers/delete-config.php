@@ -33,11 +33,14 @@ if(isset($_GET["id"]) ?? ''){
 
     // $hasil = $_GET["id"];
         if (hapus($hasil) > 0){  
+            unset($_SESSION["status_main"]);
             $_SESSION["log_delete"] += 1;
             $_SESSION["clock-delete"] = $timestamp;
             $_SESSION["delete_status"] = "sukses";
+            $_SESSION["status_main"] = "success";
             }else{
                 $_SESSION["delete_status"] = "gagal";
+                $_SESSION["status_main"] = "error";
                 error_log("false delete" . PHP_EOL, 3, "log_service_insert.log");
                 }
 }
