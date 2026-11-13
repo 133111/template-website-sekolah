@@ -4,7 +4,7 @@
     }
 ?>
 <script>
-    if(window.location){
-            window.location.href = 'dashboard/index.php';
+    if(window.location.pathname === "/school-dashboard-template/"){
+            window.location.href = 'dashboard/siswa';
     }
 </script>
