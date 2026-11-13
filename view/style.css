@@ -185,8 +185,7 @@ body{
 .container .header-text{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: start;
     color: #08090B;
     margin-bottom: 10px;
 }

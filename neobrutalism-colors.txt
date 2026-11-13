@@ -62,3 +62,49 @@ Warna pastel dengan saturasi pas yang cocok jika dibingkai border hitam #08090B:
 - Stat Card 4 (Admin)   : #DDD6FE (Lavender)
 
 ================================================================================
+
+
+Background Kartu Utama:
+Warna Dasar: #0f172a (Slate 900 / Deep Midnight Navy)
+Gradient / Card Border: #1e293b (Slate 800)
+Teks & Tipografi:
+Judul Utama ("Selamat datang kembali"): #ffffff (Pure White)
+Aksen Nama ("raihan!"): #38bdf8 (Sky Blue 400)
+Deskripsi Sub-heading: #94a3b8 (Slate 400)
+Badge Status Sistem di Header ("Sistem Manajemen Sekolah Aktif"):
+Background: rgba(234, 179, 8, 0.15) (Amber tint transparan)
+Teks & Indikator Titik: #eab308 (Amber 500)
+Pill Info Bawah (Hak Akses & Instansi):
+Background pill: rgba(30, 41, 59, 0.7) / #1e293b (Slate 800 semi-transparan)
+Teks Label: #64748b (Slate 500)
+Teks Value: #f1f5f9 (Slate 100) & #4ade80 (Green 400 untuk status online)
+Card Waktu Login:
+Background container waktu: #1e293b (Slate 800)
+Ikon Jam & Waktu: #38bdf8 (Sky Blue 400)
+Titik Status Aktif: #22c55e (Emerald Green)
+Kartu Aksen Kuning (Session Key):
+Background: #fbbf24 (Amber/Yellow 400)
+Teks / Label Gelap: #451a03 / #78350f (Amber 900)
+2. 🏷️ Palet Warna Badge di Bagian "Status Manajemen & Log Audit"
+Setiap badge status operasi basis data 24 jam terakhir memiliki skema visual terpisah (kombinasi warna background & teks):
+
+Badge Create / Tambah Data Siswa (+12 Siswa):
+
+Background: #dcfce7 (Emerald/Green 100)
+Teks: #15803d (Green 700 / Emerald)
+Ikon Box Tambah: Background #dcfce7, Ikon #16a34a
+Badge Update / Pembaruan Rapor & Kelas (8 Data):
+
+Background: #fef3c7 (Amber 100)
+Teks: #b45309 (Amber 700)
+Ikon Box Update: Background #fef3c7, Ikon #d97706
+Badge Delete / Penghapusan Arsip (-0 Hapus):
+
+Background: #fcc9cd (Rose/Red 100)
+Teks: #e11d48 (Rose 600 / Red)
+Ikon Box Hapus: Background #ffe4e6, Ikon #e11d48
+Badge Sinkronisasi Database Cloud (Tersinkron):
+
+Background: #e0f2fe (Sky/Blue 100)
+Teks: #0369a1 (Sky 700 / Ocean Blue)
+Ikon Box Sinkron: Background #e0f2fe, Ikon #0284c7

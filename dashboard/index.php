@@ -293,31 +293,31 @@ $id = $_SESSION["admin_account"] ?? '0';
 
         <div class="main-content">
         <div class="header-wrapper-l w-full flex justify-center">
-            <div class="header">
-                <div class="wrapper-text-header relative top-[8px] h-[50%] w-full flex justify-between">
+            <div class="header !bg-[#0f172a]">
+                <div class="wrapper-text-header relative top-[8px] h-[50%] w-full flex justify-between !text-white">
                     <div class="content-wrapper-text-header w-[55%] z-5">
-                        <h2 class="text-left opacity-85 text-[22px]">Selamat datang Admin</h2>
+                        <h2 class="text-left opacity-85 text-[22px]">Selamat datang, Admin</h2>
                         <h3 class="font-bold text-left text-[28px]">Sistem Manajemen Sekolah</h3>
                         <h4 class="text-[13px] text-left relative opacity-80">Kelola siswa, guru, dan manajemen lain dalam satu tempat.</h4>
                     </div>
                     <div class="card-of-wrapper-text-header w-[25%]  grid grid-cols-[35%_65%] items-center rounded-[1rem] h-[7rem] overflow-hidden relative right-5">
                         <div class="wrap-con-1 flex justify-center items-center">
                             <div class=" flex justify-center items-center rounded-full bg- w-[45px] h-[45px]">
-                                <svg class="w-[40px] h-[40px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.3" stroke="currentColor">
+                                <svg class="w-[40px] h-[40px]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.3" stroke="#38bdf8">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                                 </svg>
                             </div>
                         </div>
                         <div class="wrap-con-2 flex flex-col items-start justify-between relative h-[70%]">
                             <h2 class="text-[12px] font-semibold text-start relative">WAKTU LOGIN</h2>
-                            <strong class="text-start text-[24px] border-b border-[#08090B]" id="clock">00:00:00</strong>
-                            <p class="text-[9px] relative bottom-[6px] font-semibold"><?= date("d M Y") ;?></p>
+                            <strong class="text-start text-[24px] border-b border-[#08090B] tracking-wide" id="clock">00:00:00</strong>
+                            <p class="text-[11px] relative bottom-[6px] font-semibold !text-[#94a3b8]"><?= date("d M Y") ;?></p>
                         </div>
                     </div>
-                    <div class="card-of-wrapper-text-header w-[25%] rounded-[1rem] h-[7rem] overflow-hidden z-30 relative right-[1%]">
+                    <div class="card-of-wrapper-text-header w-[25%] rounded-[1rem] !text-black h-[7rem] overflow-hidden z-30 relative right-[1%] !bg-[#fbbf24]">
                         <div class="content-wrapper-1 flex justify-between">
                             <div class="tanggal-wrapper relative bg-[#FDE047] transition-all duration-300 ease-in-out shadow-[2px_3px_#08090B] hover:shadow-[1px_1px_13px_rgba(8,9,11,0.08)] rounded-[8px] flex justify-center items-center border border-[#08090B] p-[8px] w-[40%] h-[1.6rem]  relative left-[8%] top-[11px]">
-                                <p class="text-center h-full w-full text-[11px] font-semibold opacity-85">LOG TIME</p>
+                                <p class="text-center h-full w-full text-[11px] font-bold !tracking-wider opacity-85">SESSION</p>
                             </div>
                             <div class="tanggal-text-wrapper flex items-center relative right-[10%] top-[11px] text-[13px] opacity-75">
                                 <?= $_SESSION["log_time"];?>
@@ -334,8 +334,8 @@ $id = $_SESSION["admin_account"] ?? '0';
                         </div>
                     </div>
                 </div>
-                <div class="card-x relative top-[2.5rem] flex gap-[1rem] h-[3.2rem] w-full justify-between">
-                    <div class="card-x-1 w-[25%] rounded-[12px] overflow-hidden text-start text-[9px]">
+                <div class="card-x relative top-[2.5rem] flex gap-[1rem] h-[3.2rem] w-full justify-between text-white">
+                    <div class="card-x-1 w-[25%] rounded-[12px] !border !border-slate-700/50 overflow-hidden text-start text-[9px] !bg-slate-800/60">
                         <div class="card-content-1 flex w-full h-full">
                             <div class="main-img-1a h-full w-[30%] flex justify-center items-center">
                                 <div class="svg-1 w-[30px] h-[30px] flex justify-center items-center rounded-[7px]">
@@ -346,8 +346,8 @@ $id = $_SESSION["admin_account"] ?? '0';
                             </div>
                             <div class="main-content-text-status h-full w-[70%]">
                                 <div class="main-content-text-status-content  h-full [w-70%]">
-                                    <strong class="relative top-[5px] text-[14px]">HAK AKSES</strong>
-                                    <p class="relative bottom-[4px] text-[11px]">Izin Sistem </p>
+                                    <strong class="relative top-[5px] text-[14px] ">HAK AKSES</strong>
+                                    <p class="relative !text-[#3ec5ff] bottom-[4px] text-[11px] font-semibold">Izin Sistem </p>
                                 </div>
                             </div>
                         </div>
@@ -363,8 +363,8 @@ $id = $_SESSION["admin_account"] ?? '0';
                             </div>
                             <div class="main-content-text-status h-full w-[70%]">
                                 <div class="main-content-text-status-content  h-full [w-70%]">
-                                    <strong class="relative top-[5px] text-[14px]">Anggota</strong>
-                                    <p class="relative bottom-[4px] text-[11px]">Siswa Terdaftar Aktif</p>
+                                    <strong class="relative top-[5px] text-[14px]">Instansi</strong>
+                                    <p class="relative !text-[#94a3b8] bottom-[4px] text-[11px]">SMK N 1 Dummy</p>
                                 </div>
                             </div>
                         </div>
@@ -379,7 +379,7 @@ $id = $_SESSION["admin_account"] ?? '0';
                             <div class="main-content-text-status h-full w-[70%]">
                                 <div class="main-content-text-status-content  h-full [w-70%]">
                                     <strong class="relative top-[5px] text-[14px]">Pegawai</strong>
-                                    <p class="relative bottom-[4px] text-[11px]">Pegawai Terdaftar Aktif</p>
+                                    <p class="relative !text-[#94a3b8] bottom-[4px] text-[11px]">Pegawai Terdaftar Aktif</p>
                                 </div>
                             </div>
                         </div>
@@ -394,9 +394,9 @@ $id = $_SESSION["admin_account"] ?? '0';
                                 </div>
                             </div>
                             <div class="main-content-text-status h-full w-[70%]">
-                                <div class="main-content-text-status-content  h-full [w-70%]">
+                                <div class="main-content-text-status-content  h-full [w-70%] text!-white-600">
                                     <strong class="relative top-[5px] text-[14px]">Super Admin</strong>
-                                    <p class="relative bottom-[4px] text-[11px]">Anonym</p>
+                                    <p class="relative !text-[#94a3b8] bottom-[4px] text-[11px]">Anonym</p>
                                 </div>
                             </div>
                         </div>
@@ -407,62 +407,63 @@ $id = $_SESSION["admin_account"] ?? '0';
             <!-- items card above search bar -->
         <div class="wrapper-allitems w-full flex justify-center">
             <div class="all-items flex justify-center items-center w-[95%] gap-[5px]">
-                <div class="card-section-items">
-                    <div class="first-section">
+                <div class="card-section-items flex">
+                    <div class="first-section !flex h-full">
                         <div class="slider-card" style="transform:translateY(120%); opacity : 0; animation: kartu1 0.4s 0.3s ease-out forwards;">
                             <div class="card-items" >
-                                <h6 class="font-semibold text-[11px]">TOTAL SISWA</h6>
+                                <h6 class="font-semibold text-[13px] text-[#94a3b8]">TOTAL SISWA</h6>
                                 <div class="card-items-img">
-                                    <div class="main-text-img bg-[#A7F3D0]">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="25" viewBox="0 0 24 24" stroke-width="1.8" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" /></svg>
+                                    <div class="main-text-img bg-[#ecfdf5]">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="25" viewBox="0 0 24 24" stroke-width="1.8" stroke="#059669"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" /></svg>
                                     </div>
                                 </div>
-                                <p class="!text-[24px] !font-extrabold !text-slate-800 !font-sora"><?= $semuaData ?></p>
-                                <p style="position:absolute; bottom:1rem; left:17px; font-size:11px;" class="text-[0,0,0] font-semibold">Total murid</p>
+                                <p class="!text-[36px] !font-extrabold !text-black-800 !font-sora"><?= $semuaData ?></p>
+                                <p style="position:absolute; bottom:5.5rem; left:20px; font-size:11px;" class="text-[0,0,0] text-[14px] font-medium ">Total siswa/siswi terdaftar <span class="text-WHITE bg-[#FDE047] !p-1 rounded-[6px]">AKTIF</span></p>
                             </div>
                         </div>
 
                         <div class="slider-card" style="transform:translateY(120%); opacity : 0; animation: kartu1 0.4s 0.4s ease-out forwards;">
                             <div class="card-items" >
-                                <h6 class="font-semibold text-[11px]">TOTAL JURUSAN</h6>
+                                <h6 class="font-semibold text-[13px] text-[#94a3b8]">TOTAL JURUSAN</h6>
                                 <div class="card-items-img">
-                                    <div class="main-text-img bg-[#FDE047] ">
-                                        <svg class="text-[0,0,0]-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" /></svg>
+                                    <div class="main-text-img bg-amber-50">
+                                        <svg class="text-[0,0,0]-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#d97706" class="size-4"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" /></svg>
                                     </div>
                                 </div>
-                                <p class="!text-[24px] !font-extrabold !font-sora text-[0,0,0]" >9</p>
-                                <p style="position:absolute; bottom:1rem; left:17px;  font-size:12px;" class="text-[0,0,0] font-semibold">Total jurusan</p>
+                                <p class="!text-[36px] !font-extrabold !text-black-800 !font-sora" >9</p>
+                                <p style="position:absolute; bottom:5.5rem; left:20px; font-size:11px;" class="text-[0,0,0] text-[14px] font-medium ">Jurusan/program keahlian</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="second-section">
                         <div class="slider-card" style="transform:translateY(120%); opacity : 0; animation: kartu1 0.4s 0.5s ease-out forwards;">
                             <div class="card-items" >
-                                <h6 class="font-semibold text-[11px]">TOTAL GURU</h6>
+                                <h6 class="font-semibold text-[13px] text-[#94a3b8]">TOTAL GURU</h6>
                                 <div class="card-items-img">
-                                    <div class="main-text-img bg-[#7DD3FC]">
-                                        <svg class="text-[0,0,0]-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.7" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" /></svg>
+                                    <div class="main-text-img bg-[#f0f9ff] !border !border-[#e0f2f]">
+                                        <svg class="text-[0,0,0]-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0284c7"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" /></svg>
                                     </div>
                                 </div>
-                                <p class="!text-[24px] !font-extrabold !text-slate-800 !font-sora" ><?= $allGuruD ?></p>
-                                <p style="position:absolute; bottom:1rem; left:17px; font-size:12px;" class="text-[0,0,0] font-semibold">Total guru</p>
+                                <p class="!text-[36px] !font-extrabold !text-black-800 !font-sora" ><?= $allGuruD ?></p>
+                                <p style="position:absolute; bottom:5.5rem; left:20px; font-size:11px;" class="text-[0,0,0] text-[14px] font-medium ">Guru/pengajar terdaftar</p>
                             </div>
                         </div>
 
                         <div class="slider-card" style="transform:translateY(120%); opacity : 0; animation: kartu1 0.4s 0.7s ease-out forwards;">
                             <div class="card-items" >
-                                <h6 class="font-semibold text-[11px]">TOTAL ADMIN</h6>
+                                <h6 class="font-semibold text-[13px] text-[#94a3b8]">TOTAL ADMIN</h6>
                                 <div class="card-items-img">
-                                    <div class="main-text-img bg-[#DDD6FE] text-purple-600 ">
-                                        <svg class="text-[0,0,0]-600" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                    <div class="main-text-img bg-[#faf5ff] text-purple-600 ">
+                                        <svg class="text-[0,0,0]-600" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 24 24" fill="none" stroke="#9333ea " stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                                     </div>
                                 </div>
-                                <p class="!text-[24px] !font-extrabold !text-slate-800 !font-sora" ><?= $totalAdmin ; ?></p>
-                                <p style="position:absolute; bottom:1rem; left:17px;  font-size:12px;" class="text-[0,0,0] font-semibold">Total admin</p>
+                                <p class="!text-[36px] !font-extrabold !text-black-800 !font-sora" ><?= $totalAdmin ; ?></p>
+                                <p style="position:absolute; bottom:5.5rem; left:20px; font-size:11px;" class="text-[0,0,0] text-[14px] font-medium ">Admin terdaftar database</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+            <div class="all-items2 h-[330px] relative left-2">
                 <div class="second-section-card-items p-4 rounded-[12px] overflow-hidden relative"> <!-- main-wrapper -->
                     <div class="main-wrapper-section-card flex gap-[1%] relative left-[5px] w-full !h-full gap-2" style="padding:8px;">
                         <div class="kartu-1 !w-[48%] h-full ml-[5px] rounded-[12px] overflow-hidden animate-slider-kartu2 relative">
@@ -473,16 +474,16 @@ $id = $_SESSION["admin_account"] ?? '0';
                                     <p class="text-[12px] text-black relative right-2"><?= date("d/m/y") ;?></p>
                                 </div>
                                 <div class="wrapper-4card relative flex justify-center items-center flex-col top-4 w-full h-[12rem] p-4 gap-3">
-                                    <div class="card-of-1 overflow-hidden text-black text-[14px] px-[6px] flex items-center h-[35%] w-[90%] rounded-[8px]">
-                                        <div class="wrapper-bg-svg bg-[#00F59B] shadow-[-1px_2px_#08090B] relative left-[5%] w-[2rem]  h-[75%] border border-[#08090B] rounded-[6px] flex justify-center items-center">
-                                            <svg class="w-[20px] h-[20px] text-blue-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#08090B">
+                                    <div class="card-of-1 overflow-hidden text-black text-[14px] px-[6px] flex items-center h-[40%] w-[90%] rounded-[8px]">
+                                        <div class="wrapper-bg-svg !bg-[#dcfce7] relative left-[5%] w-[2rem]  h-[75%] rounded-[6px] flex justify-center items-center">
+                                            <svg class="w-[20px] h-[20px] text-blue-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#16a34a">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 10.5v6m3-3H9m4.06-7.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
                                             </svg>
                                         </div>
                                         <div class="card-info-wrap flex justify-between w-[80%]">
                                             <div class="sep-1">
-                                                <strong class="text-black text-start text-[13px] relative left-[1rem] top-[2px]">Create</strong>
-                                                <p class="text-black text-[10px] text-start relative left-[1rem] bottom-[2px] opacity-85">Last at : <?= $_SESSION["clock-insert"]; ?></p> 
+                                                <strong class="text-black text-start text-[13px] relative left-[25px] top-[2px]">Create</strong>
+                                                <p class="text-black text-[10px] text-start relative left-[25px] bottom-[2px] opacity-85">Last at : <?= $_SESSION["clock-insert"]; ?></p> 
                                             </div>   
                                             <div class="sep-2 flex items-center">
                                                 <div class="bg-[rgba(237,236,236,0.096)] rounded-[8px] w-[30px] text-center">
@@ -494,16 +495,16 @@ $id = $_SESSION["admin_account"] ?? '0';
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card-of-1 overflow-hidden bg-[rgba(238,234,234,0.180)] text-black text-[14px] px-[6px] flex items-center h-[35%] w-[90%] rounded-[8px]">
-                                        <div class="wrapper-bg-svg bg-[#EF4444] shadow-[-1px_2px_#08090B] relative left-[5%] w-[2rem] h-[75%] border border-[#08090B] rounded-[6px] flex justify-center items-center">
-                                            <svg class="w-[20px] h-[20px] text-amber-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#08090B">
+                                    <div class="card-of-1 overflow-hidden bg-[rgba(238,234,234,0.180)] text-black text-[14px] px-[6px] flex items-center h-[40%] w-[90%] rounded-[8px]">
+                                        <div class="wrapper-bg-svg bg-[#fcc9cd]  relative left-[5%] w-[2rem] h-[75%] rounded-[6px] flex justify-center items-center">
+                                            <svg class="w-[20px] h-[20px] text-amber-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#e11d48">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
                                             </svg>
                                         </div>
                                         <div class="card-info-wrap flex justify-between w-[80%]">
                                             <div class="sep-1">
-                                                <strong class="text-black text-start text-[13px] relative left-[1rem] top-[2px]">Delete</strong>
-                                                <p class="text-black text-[10px] text-start relative left-[1rem] bottom-[2px] opacity-85">Last at : <?= $_SESSION["clock-delete"]; ?></p> 
+                                                <strong class="text-black text-start text-[13px] relative left-[25px] top-[2px]">Delete</strong>
+                                                <p class="text-black text-[10px] text-start relative left-[25px] bottom-[2px] opacity-85">Last at : <?= $_SESSION["clock-delete"]; ?></p> 
                                             </div>   
                                             <div class="sep-2 flex items-center">
                                                 <div class="w-[30px] rounded-[8px] text-center bg-[rgba(237,236,236,0.096)] ">
@@ -515,16 +516,16 @@ $id = $_SESSION["admin_account"] ?? '0';
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card-of-1 overflow-hidden bg-[rgba(238,234,234,0.180)] text-black text-[14px] px-[6px] flex items-center h-[35%] w-[90%] rounded-[8px]">
-                                        <div class="wrapper-bg-svg bg-[#F59E0B] shadow-[-1px_2px_#08090B] relative left-[5%] w-[2rem] h-[75%] border border-[#08090B] rounded-[6px] flex justify-center items-center">
-                                            <svg class="w-[20px] h-[20px] text-rose-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#08090B">
+                                    <div class="card-of-1 overflow-hidden bg-[rgba(238,234,234,0.180)] text-black text-[14px] px-[6px] flex items-center h-[40%] w-[90%] rounded-[8px]">
+                                        <div class="wrapper-bg-svg bg-[#fef3c7]  relative left-[5%] w-[2rem] h-[75%] rounded-[6px] flex justify-center items-center">
+                                            <svg class="w-[20px] h-[20px] text-rose-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#d97706">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5m6 4.125 2.25 2.25m0 0 2.25 2.25M12 13.875l2.25-2.25M12 13.875l-2.25 2.25M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
                                             </svg>
                                         </div>
                                         <div class="card-info-wrap flex justify-between w-[80%]">
                                             <div class="sep-1">
-                                                <strong class="text-black text-start text-[13px] relative left-[1rem] top-[2px]">Update</strong>
-                                                <p class="text-black text-[10px] text-start relative left-[1rem] bottom-[2px] opacity-85">Last at : <?= $_SESSION["clock-update"]; ?></p> 
+                                                <strong class="text-black text-start text-[13px] relative left-[25px] top-[2px]">Update</strong>
+                                                <p class="text-black text-[10px] text-start relative left-[25px] bottom-[2px] opacity-85">Last at : <?= $_SESSION["clock-update"]; ?></p> 
                                             </div>   
                                             <div class="sep-2 flex items-center">
                                                 <div class="w-[30px] rounded-[8px] text-center bg-[rgba(237,236,236,0.096)] ">
@@ -536,15 +537,15 @@ $id = $_SESSION["admin_account"] ?? '0';
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="mainStatusOperation" class="card-of-1 overflow-hidden bg-[rgba(238,234,234,0.180)] text-black text-[14px] px-[6px] flex items-center h-[35%] w-[90%] rounded-[8px]">
-                                        <div id="mainSvg-operate" class="wrapper-bg-svg shadow-[-1px_2px_#08090B] relative left-[5%] w-[2rem] h-[75%] border border-[#08090B] rounded-[6px] flex justify-center items-center">
-                                            <svg class="w-[20px] h-[20px] text-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="size-6">
+                                    <div id="mainStatusOperation" class="card-of-1 overflow-hidden bg-[rgba(238,234,234,0.180)] text-black text-[14px] px-[6px] flex items-center h-[40%] w-[90%] rounded-[8px]">
+                                        <div id="mainSvg-operate" class="wrapper-bg-svg !bg-[#e0f2fe]  relative left-[5%] w-[2rem] h-[75%] rounded-[6px] flex justify-center items-center">
+                                            <svg class="w-[20px] h-[20px] text-[#e0f2fe]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0284c7" class="size-6">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0 3 3m-3-3-3 3M6.75 19.5a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z" />
                                             </svg>
                                         </div>
                                         <div class="card-info-wrap flex flex-col">
-                                            <strong id="strongMainIdentificate" class="text-black text-start text-[13px] relative left-[1rem] top-[2px]"><?= $_SESSION["status_main"] ?? "belum ada";?></strong>
-                                            <p class="text-black text-[10px] text-start relative left-[1rem] bottom-[2px] opacity-85">Last operate <span><?= $_SESSION["status_main"] ?? "belum ada"?></span></p>    
+                                            <strong id="strongMainIdentificate" class="text-black text-start text-[13px] relative left-[25px] top-[2px]"><?= $_SESSION["status_main"] ?? "Sinkronisasi data ke server: none";?></strong>
+                                            <p class="text-black text-[10px] text-start relative left-[25px] bottom-[2px] opacity-85">Last operate: <span><?= $_SESSION["status_main"] ?? "belum ada"?></span></p>    
                                         </div>
                                     </div>
                                 </div>
@@ -608,7 +609,6 @@ $id = $_SESSION["admin_account"] ?? '0';
                     </div>
                 </div>
             </div>
-        </div>
         <section class="chart-of-status-crud w-full h-[15%] !p-[3%]"> <!-- chart of crud for while 24h session active -->
             <div class="main-chart-content !p-[12px] flex justify-between items-center w-full h-[300px] border-2 border-black rounded-[12px] shadow-[3px_4px_#08090B] !p[2rem] !pl-[2rem] !pr-[2rem] overflow-hidden bg-[#FFFEFE]">
                 <canvas id="canvas-chart" class="relative top-[4%] rounded-[4px] !h-full !w-[60%]">
