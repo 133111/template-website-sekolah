@@ -1,6 +1,6 @@
 <?php 
 //helpers call
-include_once __DIR__ . '/../public/routes.php'; //routing path
+include_once __DIR__ . '/../dashboard/routes.php'; //routing path
 require_once __DIR__ . '/../controllers/delete-config.php';
 require_once __DIR__ . '/../config/functions.php'; //helpers 
 // ----------> Call Controllers Bellow<----------
@@ -536,14 +536,14 @@ $id = $_SESSION["admin_account"] ?? '0';
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card-of-1 overflow-hidden bg-[rgba(238,234,234,0.180)] text-black text-[14px] px-[6px] flex items-center h-[35%] w-[90%] rounded-[8px]">
-                                        <div class="wrapper-bg-svg bg-[#22C55E] shadow-[-1px_2px_#08090B] relative left-[5%] w-[2rem] h-[75%] border border-[#08090B] rounded-[6px] flex justify-center items-center">
+                                    <div id="mainStatusOperation" class="card-of-1 overflow-hidden bg-[rgba(238,234,234,0.180)] text-black text-[14px] px-[6px] flex items-center h-[35%] w-[90%] rounded-[8px]">
+                                        <div id="mainSvg-operate" class="wrapper-bg-svg shadow-[-1px_2px_#08090B] relative left-[5%] w-[2rem] h-[75%] border border-[#08090B] rounded-[6px] flex justify-center items-center">
                                             <svg class="w-[20px] h-[20px] text-emerald-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="black" class="size-6">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0 3 3m-3-3-3 3M6.75 19.5a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z" />
                                             </svg>
                                         </div>
                                         <div class="card-info-wrap flex flex-col">
-                                            <strong class="text-black text-start text-[13px] relative left-[1rem] top-[2px]"><?= $_SESSION["status_main"] ?? "belum ada";?></strong>
+                                            <strong id="strongMainIdentificate" class="text-black text-start text-[13px] relative left-[1rem] top-[2px]"><?= $_SESSION["status_main"] ?? "belum ada";?></strong>
                                             <p class="text-black text-[10px] text-start relative left-[1rem] bottom-[2px] opacity-85">Last operate <span><?= $_SESSION["status_main"] ?? "belum ada"?></span></p>    
                                         </div>
                                     </div>
@@ -774,6 +774,15 @@ $id = $_SESSION["admin_account"] ?? '0';
             }
         })
     }
+    const mainOperateResult = document.querySelector("#mainSvg-operate");
+    const strMain = document.querySelector("#strongMainIdentificate");
+    if(strMain && strMain.textContent === "success"){
+            mainOperateResult.classList.add("!bg-[#22C55E]");
+        }else if(strMain && strMain.textContent === "error"){
+            mainOperateResult.classList.add("!bg-red-500");
+        }else{
+            mainOperateResult.classList.add("!bg-[#22C55E]");
+        }
 </script>
 </body>
 </html>
