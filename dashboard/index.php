@@ -296,6 +296,10 @@ $id = $_SESSION["admin_account"] ?? '0';
             <div class="header !bg-[#0f172a]">
                 <div class="wrapper-text-header relative top-[8px] h-[50%] w-full flex justify-between !text-white">
                     <div class="content-wrapper-text-header w-[55%] z-5">
+                        <div class="heroheadertext relative bottom-2 !w-[75%] border !border-slate-700/50 !bg-slate-800/60 flex justify-start items-center rounded-12px text-[14px] gap-1 !pl-2 !p-1 rounded-[16px]">
+                            <div class="dot-heroheader-text !w-[14px] !h-[14px] !bg-[#eab308] rounded-full"></div>
+                            <h2 class="text-[#eab308]">Sistem manajemen sekolah aktif</h2>
+                        </div>
                         <h2 class="text-left opacity-85 text-[22px]">Selamat datang, Admin</h2>
                         <h3 class="font-bold text-left text-[28px]">Sistem Manajemen Sekolah</h3>
                         <h4 class="text-[13px] text-left relative opacity-80">Kelola siswa, guru, dan manajemen lain dalam satu tempat.</h4>
@@ -309,7 +313,11 @@ $id = $_SESSION["admin_account"] ?? '0';
                             </div>
                         </div>
                         <div class="wrap-con-2 flex flex-col items-start justify-between relative h-[70%]">
-                            <h2 class="text-[12px] font-semibold text-start relative">WAKTU LOGIN</h2>
+                            <div class="flex w-full items-center gap-8">
+                                <h2 class="text-[12px] font-semibold text-start relative">WAKTU LOGIN</h2>
+                                <div class="dotWaktuLogin !bg-green-600 w-[8px] h-[8px] rounded-full"></div>
+                            </div>
+
                             <strong class="text-start text-[24px] border-b border-[#08090B] tracking-wide" id="clock">00:00:00</strong>
                             <p class="text-[11px] relative bottom-[6px] font-semibold !text-[#94a3b8]"><?= date("d M Y") ;?></p>
                         </div>
@@ -334,7 +342,7 @@ $id = $_SESSION["admin_account"] ?? '0';
                         </div>
                     </div>
                 </div>
-                <div class="card-x relative top-[2.5rem] flex gap-[1rem] h-[3.2rem] w-full justify-between text-white">
+                <div class="card-x relative top-[3rem] flex gap-[1rem] h-[3.2rem] w-full justify-between text-white">
                     <div class="card-x-1 w-[25%] rounded-[12px] !border !border-slate-700/50 overflow-hidden text-start text-[9px] !bg-slate-800/60">
                         <div class="card-content-1 flex w-full h-full">
                             <div class="main-img-1a h-full w-[30%] flex justify-center items-center">
@@ -418,7 +426,7 @@ $id = $_SESSION["admin_account"] ?? '0';
                                     </div>
                                 </div>
                                 <p class="!text-[36px] !font-extrabold !text-black-800 !font-sora"><?= $semuaData ?></p>
-                                <p style="position:absolute; bottom:5.5rem; left:20px; font-size:11px;" class="text-[0,0,0] text-[14px] font-medium ">Total siswa/siswi terdaftar <span class="text-WHITE bg-[#FDE047] !p-1 rounded-[6px]">AKTIF</span></p>
+                                <p style="position:absolute; bottom:5rem; left:20px; font-size:11px;" class="text-[0,0,0] text-[14px] font-medium ">Total siswa/siswi terdaftar <span class="text-WHITE bg-[#FDE047] !p-1 rounded-[6px]">AKTIF</span></p>
                             </div>
                         </div>
 
@@ -431,7 +439,7 @@ $id = $_SESSION["admin_account"] ?? '0';
                                     </div>
                                 </div>
                                 <p class="!text-[36px] !font-extrabold !text-black-800 !font-sora" >9</p>
-                                <p style="position:absolute; bottom:5.5rem; left:20px; font-size:11px;" class="text-[0,0,0] text-[14px] font-medium ">Jurusan/program keahlian</p>
+                                <p style="position:absolute; bottom:5rem; left:20px; font-size:11px;" class="text-[0,0,0] text-[14px] font-medium ">Jurusan/program keahlian</p>
                             </div>
                         </div>
                         <div class="slider-card" style="transform:translateY(120%); opacity : 0; animation: kartu1 0.4s 0.5s ease-out forwards;">
@@ -443,7 +451,7 @@ $id = $_SESSION["admin_account"] ?? '0';
                                     </div>
                                 </div>
                                 <p class="!text-[36px] !font-extrabold !text-black-800 !font-sora" ><?= $allGuruD ?></p>
-                                <p style="position:absolute; bottom:5.5rem; left:20px; font-size:11px;" class="text-[0,0,0] text-[14px] font-medium ">Guru/pengajar terdaftar</p>
+                                <p style="position:absolute; bottom:5rem; left:20px; font-size:11px;" class="text-[0,0,0] text-[14px] font-medium ">Guru/pengajar terdaftar</p>
                             </div>
                         </div>
 
@@ -456,7 +464,7 @@ $id = $_SESSION["admin_account"] ?? '0';
                                     </div>
                                 </div>
                                 <p class="!text-[36px] !font-extrabold !text-black-800 !font-sora" ><?= $totalAdmin ; ?></p>
-                                <p style="position:absolute; bottom:5.5rem; left:20px; font-size:11px;" class="text-[0,0,0] text-[14px] font-medium ">Admin terdaftar database</p>
+                                <p style="position:absolute; bottom:5rem; left:20px; font-size:11px;" class="text-[0,0,0] text-[14px] font-medium ">Admin terdaftar database</p>
                             </div>
                         </div>
                     </div>
@@ -474,7 +482,7 @@ $id = $_SESSION["admin_account"] ?? '0';
                                     <p class="text-[12px] text-black relative right-2"><?= date("d/m/y") ;?></p>
                                 </div>
                                 <div class="wrapper-4card relative flex justify-center items-center flex-col top-4 w-full h-[12rem] p-4 gap-3">
-                                    <div class="card-of-1 overflow-hidden text-black text-[14px] px-[6px] flex items-center h-[40%] w-[90%] rounded-[8px]">
+                                    <div class="card-of-1 overflow-hidden text-black text-[14px] !p-[4px] !bg-[#f8fafc] px-[6px] flex items-center h-[75%] !p-1 w-[90%] rounded-[8px]">
                                         <div class="wrapper-bg-svg !bg-[#dcfce7] relative left-[5%] w-[2rem]  h-[75%] rounded-[6px] flex justify-center items-center">
                                             <svg class="w-[20px] h-[20px] text-blue-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#16a34a">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 10.5v6m3-3H9m4.06-7.19-2.12-2.12a1.5 1.5 0 0 0-1.061-.44H4.5A2.25 2.25 0 0 0 2.25 6v12a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9a2.25 2.25 0 0 0-2.25-2.25h-5.379a1.5 1.5 0 0 1-1.06-.44Z" />
@@ -495,7 +503,7 @@ $id = $_SESSION["admin_account"] ?? '0';
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card-of-1 overflow-hidden bg-[rgba(238,234,234,0.180)] text-black text-[14px] px-[6px] flex items-center h-[40%] w-[90%] rounded-[8px]">
+                                    <div class="card-of-1 overflow-hidden bg-[rgba(238,234,234,0.180)] !p-[4px] text-black text-[14px] px-[6px] flex items-center h-[75%] !p-1 w-[90%] rounded-[8px]">
                                         <div class="wrapper-bg-svg bg-[#fcc9cd]  relative left-[5%] w-[2rem] h-[75%] rounded-[6px] flex justify-center items-center">
                                             <svg class="w-[20px] h-[20px] text-amber-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#e11d48">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
@@ -516,7 +524,7 @@ $id = $_SESSION["admin_account"] ?? '0';
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="card-of-1 overflow-hidden bg-[rgba(238,234,234,0.180)] text-black text-[14px] px-[6px] flex items-center h-[40%] w-[90%] rounded-[8px]">
+                                    <div class="card-of-1 overflow-hidden bg-[rgba(238,234,234,0.180)] !p-[4px] text-black text-[14px] px-[6px] flex items-center h-[75%] !p-1 w-[90%] rounded-[8px]">
                                         <div class="wrapper-bg-svg bg-[#fef3c7]  relative left-[5%] w-[2rem] h-[75%] rounded-[6px] flex justify-center items-center">
                                             <svg class="w-[20px] h-[20px] text-rose-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#d97706">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5m6 4.125 2.25 2.25m0 0 2.25 2.25M12 13.875l2.25-2.25M12 13.875l-2.25 2.25M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
@@ -537,7 +545,7 @@ $id = $_SESSION["admin_account"] ?? '0';
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="mainStatusOperation" class="card-of-1 overflow-hidden bg-[rgba(238,234,234,0.180)] text-black text-[14px] px-[6px] flex items-center h-[40%] w-[90%] rounded-[8px]">
+                                    <div id="mainStatusOperation" class="card-of-1 !p-[4px] overflow-hidden bg-[rgba(238,234,234,0.180)] text-black text-[14px] px-[6px] flex items-center !h-[75%] w-[90%] rounded-[8px]">
                                         <div id="mainSvg-operate" class="wrapper-bg-svg !bg-[#e0f2fe]  relative left-[5%] w-[2rem] h-[75%] rounded-[6px] flex justify-center items-center">
                                             <svg class="w-[20px] h-[20px] text-[#e0f2fe]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0284c7" class="size-6">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0 3 3m-3-3-3 3M6.75 19.5a4.5 4.5 0 0 1-1.41-8.775 5.25 5.25 0 0 1 10.233-2.33 3 3 0 0 1 3.758 3.848A3.752 3.752 0 0 1 18 19.5H6.75Z" />

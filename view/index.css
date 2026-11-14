@@ -433,7 +433,7 @@ body {
     box-shadow: -1px 2px #08090B;
 }
 .card-of-1{
-    background : #FFFFFF;
+    background : #f8fafc;
     border: 1px solid #08090B;
     box-shadow: -3px 4px #08090B;
     transition: 0.3s ease-in-out;
@@ -506,7 +506,7 @@ body {
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    height: 230px;
+    height: 220px;
 }
 
 .card-section-items {
