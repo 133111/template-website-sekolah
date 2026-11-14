@@ -1,5 +1,14 @@
 <!-- body <> n </> on caller && head on caller -->
 <!-- main-wrapper of grid -->
+<?php
+$raw = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
+$url = explode("/", rtrim($raw));
+$main_url = end($url);
+print_r($main_url);
+if(isset($_SESSION["page_dst"])){
+    $_SESSION["page_dst"] = $main_url ;
+}
+ ?>
 <div class="wrapper">
    <!-- Sidebar -->
     <aside class="side-bar">
@@ -158,7 +167,7 @@
                             <span class="relative left-1">
                                 <svg class="size-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
                             </span>
-                            <p class="font-medium hover:text-[#08090B] transition-all duration-300 cursor-pointer">Siswa</p>
+                            <p class="font-medium hover:text-[#08090B] transition-all duration-300 cursor-pointer"><?= $_SESSION["page_dst"];?></p>
                         </div>
                     </div>
                     <div class="account-hero-header">

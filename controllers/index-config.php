@@ -14,6 +14,11 @@ if(isset($_SESSION["role"]) && $_SESSION["role"] == "superadmin"){
     $_SESSION["role"] = "key_admin" ; //unlock key_admin as superadmin
 }// else $_SESSION["role"] = "user"
 $today = date("d M Y"); //realtime crud status
+$url = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
+$urlClean = explode("/", rtrim($url));
+$mainUrl = end($urlClean);
+//set page
+$_SESSION["page_dst"] = $mainUrl;
 if(!isset($_SESSION["tanggal_crud"])){
     //status main
     $_SESSION["status_main"] = "belum ada";

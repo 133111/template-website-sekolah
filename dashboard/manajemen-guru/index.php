@@ -10,7 +10,7 @@ if(!isset($_SESSION["login"])){
 }
 define("BASE_URL", "/school-dashboard-template"); //set const
 // call helpers and controllers
-include_once __DIR__ . '/../../public/routes.php';
+include_once __DIR__ . '/../../dashboard/routes.php';
 require_once __DIR__ . '/../../config/functions.php';
 include_once __DIR__ . '/../../controllers/manajemen-guru/index.php';
 
