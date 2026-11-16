@@ -93,8 +93,8 @@ $id = $_SESSION["admin_account"] ?? '0';
                         </div>
                         <div class="admin-text">
                             <p>Panel Admin</p>
-                            <div class="general-text !text-[13px]">
-                                <p>Manajemen Sekolah</p>
+                            <div class="general-text !text-[13px] !text-[#eab308]">
+                                <p>SMK N 1 NGAWI</p>
                             </div>
                         </div>
                     </div>
@@ -422,11 +422,18 @@ $id = $_SESSION["admin_account"] ?? '0';
                                 <h6 class="font-semibold text-[13px] text-[#94a3b8]">TOTAL SISWA</h6>
                                 <div class="card-items-img">
                                     <div class="main-text-img bg-[#ecfdf5]">
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="25" viewBox="0 0 24 24" stroke-width="1.8" stroke="#059669"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" /></svg>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="25" viewBox="0 0 24 24" stroke-width="1.8" stroke="#22c55e"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" /></svg>
                                     </div>
                                 </div>
                                 <p class="!text-[36px] !font-extrabold !text-black-800 !font-sora"><?= $semuaData ?></p>
-                                <p style="position:absolute; bottom:5rem; left:20px; font-size:11px;" class="text-[0,0,0] text-[14px] font-medium ">Total siswa/siswi terdaftar <span class="text-WHITE bg-[#FDE047] !p-1 rounded-[6px]">AKTIF</span></p>
+                                <p style="position:absolute; bottom:5rem; left:20px; font-size:11px;" class="text-[0,0,0] text-[14px] font-medium ">Total siswa/siswi terdaftar <span class="!text-[#22c55e] font-semibold">AKTIF</span></p>
+                                <div class="w-full h-[25%] relative top-[15%]">
+                                    <div class="flex items-center justify-start h-full w-full gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#15803d" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" /></svg>
+                                        <span class="text-[#15803d] text-[15px] font-semibold">+1.1%</span>
+                                        <p class="!text-[11px] !text-[#94a3b8] relative left-6">Tahun ajaran baru</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -451,7 +458,14 @@ $id = $_SESSION["admin_account"] ?? '0';
                                     </div>
                                 </div>
                                 <p class="!text-[36px] !font-extrabold !text-black-800 !font-sora" ><?= $allGuruD ?></p>
-                                <p style="position:absolute; bottom:5rem; left:20px; font-size:11px;" class="text-[0,0,0] text-[14px] font-medium ">Guru/pengajar terdaftar</p>
+                                <p style="position:absolute; bottom:5rem; left:20px; font-size:11px;" class="text-[0,0,0] text-[14px] font-medium ">Guru/pengajar <span class="!text-[#0284c7]">terdaftar</span></p>
+                                <div class="w-full h-[25%] relative top-[15%]">
+                                    <div class="flex items-center justify-start h-full w-full gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#15803d" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941" /></svg>
+                                        <span class="text-[#15803d] text-[15px] font-semibold">+1.1%</span>
+                                        <p class="!text-[11px] !text-[#94a3b8] relative left-6">Guru lama/baru terdaftar</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -556,6 +570,11 @@ $id = $_SESSION["admin_account"] ?? '0';
                                             <p class="text-black text-[10px] text-start relative left-[25px] bottom-[2px] opacity-85">Last operate: <span><?= $_SESSION["status_main"] ?? "belum ada"?></span></p>    
                                         </div>
                                     </div>
+                                </div>
+                                <div class="footerOfMainStatus-manajemen flex justify-start items-center w-[90%] !p-2 relative top-[30px] left-4">
+                                        <footer>
+                                            <p class="text-[12px]">STATUS LOG: <span class="text-[11px]">Online & Terverifikasi</span></p>
+                                        </footer>
                                 </div>
                             </div>
                         </div>
