@@ -17,7 +17,7 @@ body{
 
 /* main wrapper of content*/
 .main-wrapper{
-    padding: 24px;
+    padding: 14px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -242,10 +242,7 @@ body{
     width: 100%;
 }
 .input-box label{
-    font-size: 13px;
-    font-family: "Space Grotesk", 'Sora', 'Plus Jakarta Sans', sans-serif;
-    font-weight: 600;
-    margin-bottom: 3px;
+    font-size: 12px !important;
 }
 
 
@@ -274,7 +271,7 @@ body{
     border-radius: 10px;
     outline: none;
     border: 2px solid #08090B;
-    box-shadow: 3px 4px #08090B;
+    box-shadow: 2px 3px #08090B;
     transition: 0.2s ease-in-out;
 }
 @keyframes slide-input-left {
@@ -297,7 +294,6 @@ body{
 .remember{
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 6px;
     padding: 4px 0;
     margin-top: 10px;
@@ -462,7 +458,7 @@ body{
     }
 
     .input-box label {
-        font-size: 12px !important;
+        font-size: 10px !important;
     }
 
     .input-box input {
