@@ -114,7 +114,7 @@ include __DIR__ . '/../controllers/login-config.php';
                         <div class="activeButton bg-emerald-500 w-[8px] h-[8px] rounded-full"></div>
                         <span class="text-[8px] font-lighter">Server SIMS: Berjalan Normal</span>
                     </div>
-                    <h5 class="font-semibold z-10 text-start !text-[15px]">Pusat Manajemen & Layanan Terpadu sekolah</h5>
+                    <h5 class="font-semibold z-10 text-start !text-[18px]">Pusat Manajemen & Layanan Terpadu sekolah</h5>
                     <div class="kartu-login-info flex flex-col gap-6 w-full h-[250px] relative top-[1rem]">
                         <div class="kartu-ke w-full h-[45%] rounded-[12px]">
                             <div class="carder w-full h-[4.2rem] rounded-[12px] text-[12px]">
@@ -150,6 +150,19 @@ include __DIR__ . '/../controllers/login-config.php';
                             </div>
                         </div>
                     </div>
+                    <div class="bg-red-600 w-[110%] h-[15%] !relative !top-[15%] flex items-center relative right-4">
+                        <div class="w-[60%] !h-full bg-emerald-500">
+                            <div class="text-1 text-start flex flex-col ">
+                                <p class="text-[8px]">Belum memiliki akun petugas?</p>
+                                <p class="text-[9px]">Hubungi Unit IT dan Administrasi Sekolah</p>
+                            </div>
+                        </div>
+                        <div class="w-[40%] !h-full bg-slate-500">
+                            <div class="text-1 text-start">
+                                
+                            </div>
+                        </div>
+                    </div> 
                 </div>
             </div>
         </div>
