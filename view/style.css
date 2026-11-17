@@ -45,7 +45,6 @@ body{
 
 /*\dark card right content */
 .card-content{ 
-    background: #08090B;
     overflow: hidden;
     padding: 24px 20px;
     border-radius: 6px;
