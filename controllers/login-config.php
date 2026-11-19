@@ -41,9 +41,9 @@ if(isset($_POST["login"])){
     $resultSuper = mysqli_query($conn, "SELECT * FROM superadmin WHERE username = '$username'");
     $resultUser = mysqli_query($conn, "SELECT * FROM users WHERE username = '$username'");
 
-    $account = null;
-    $isSuper = false;
-
+    $account = null; //init
+    $isSuper = false; //init
+    //check per tabel by num_row return
     if(mysqli_num_rows($resultSuper) === 1){
         $account = mysqli_fetch_assoc($resultSuper);
         $isSuper = true;

@@ -1,5 +1,9 @@
 <?php
 // ----------> Call config/functions Bellow<----------
+if((string)!$_SESSION["admin_account"] && (string) !$_SESSION["tanggal_crud"]){
+    header("Location: login.php");
+    return ;
+}
 require __DIR__ . '/../config/functions.php';
 //end
 
