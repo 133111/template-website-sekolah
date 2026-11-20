@@ -12,30 +12,38 @@ try{
     $method = $_SERVER["REQUEST_METHOD"]; //check
     if($method !== "GET"){
         $apiWrap = [
-            "message" => "method invalid",
+            "message" => "method invalid, data tidak bisa ditampilkan",
             "code" => http_response_code(403)
         ];
+        die;
     }else{
-        $role = trim(strip_tags($_SESSION["role"]));
-        $userName = trim(strip_tags($_SESSION["username"]));
-        $idAccount = trim(strip_tags($_SESSION["admin_account"]));
-        $isStatus = trim(strip_tags($_SESSION["login"]));
-        $apiWrap = [
+        $role = trim(strip_tags($_SESSION["role"] ?? "not found"));
+        $userName = trim(strip_tags($_SESSION["username"] ?? "not found")) ;
+        $idAccount = trim(strip_tags($_SESSION["admin_account"] ?? "not found"));
+        $isStatus = trim(strip_tags($_SESSION["login"] ?? false));
+        (array) $apiWrap = [
+            "message" => "data admin terambil",
             "role" => $role , 
             "usernameAdmin" => $userName, 
             "idAdmin" => $idAccount, 
             "status_login" => $isStatus,
             "status" => http_response_code(200)
         ];
-        if(!$apiWrap || !is_array($apiWrap))
+        if(!$apiWrap || !is_array($apiWrap) || !$isStatus)
         {
-            throw new Exception("error" . http_response_code(404));
+            $apiWrap = [
+                "message" => "terdapat error invalid, api tidak mereturn data valid!",
+                "status" => false,
+                "code" => 404
+            ];
+            throw new Exception();
         }
     }
-    $wrapFinal = json_encode($apiWrap);
+    $wrapFinal = json_encode($apiWrap, JSON_PRETTY_PRINT);
     echo $wrapFinal ;
 }catch(Exception $e){
-    print_r("error:".$e->getMessage());
+    $wrapFinal = json_encode($apiWrap, JSON_PRETTY_PRINT);
+    echo $wrapFinal;
     exit ;
 }
 ?>

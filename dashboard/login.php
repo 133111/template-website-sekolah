@@ -159,10 +159,17 @@ include __DIR__ . '/../controllers/login-config.php';
                                 <p class="text-[9px]">Hubungi Unit IT dan Administrasi Sekolah</p>
                             </div>
                         </div>
-                        <div class="w-[25%] !h-full bg-slate-500">
-                            <div class="text-1 text-start">
-                                
-                            </div>
+                        <div class="w-[150px] !h-[60%]">
+                            <a href="https://wa.me/6287778031996?text=halo admin, saya butuh bantuan SIMS" target="_blank">
+                                <div class="text-1 !p-[4px] text-start gap-1 !bg-[#132238] cursor-pointer h-full w-full rounded-[8px] flex items-center">
+                                    <div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-headset"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 14v-3a8 8 0 1 1 16 0v3" /><path d="M18 19c0 1.657 -2.686 3 -6 3" /><path d="M4 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3" /><path d="M15 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3" /></svg>
+                                    </div>
+                                    <div>
+                                        <p class="!text-[8px] font-semibold">Bantuan Petugas</p>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
                     </div> 
                 </div>
