@@ -56,8 +56,7 @@ $dataPerPage = (int) 15;
 $allData2= query("SELECT * FROM mahasiswa ORDER BY id DESC LIMIT $firstData, $dataPerPage"); //limit 15 fetch
     $mahasiswa = $allData2 ; 
     $jumlah = count($mahasiswa); //count all data from fetch
-
-//Searching 
+//Searching set
 if(isset($_POST["cari"])){
     $mahasiswa = search($_POST["keyword"]); // put keyword from input here
 }
