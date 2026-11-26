@@ -41,7 +41,7 @@ if(isset($_GET["id"]) ?? ''){
             }else{
                 $_SESSION["delete_status"] = "gagal";
                 $_SESSION["status_main"] = "error";
-                error_log("false delete" . PHP_EOL, 3, "log_service_insert.log");
+                error_log("error on delete" . PHP_EOL, 3, __DIR__ ."../error/error_monitoring.txt");
                 }
 }
 ?>

@@ -1,8 +1,11 @@
 <?php
 // ----------> Call config/functions Bellow<----------
-if((string)!$_SESSION["admin_account"] && (string) !$_SESSION["tanggal_crud"]){
-    header("Location: login.php");
-    return ;
+if(session_status() === PHP_SESSION_NONE){
+    session_start();
+}
+if((string)!$_SESSION["login"] || (string)!$_SESSION["tanggal_crud"] || (string)$_SESSION["role"] !== "key_admin"){
+    header("Location: login.php"); //kick
+    return;
 }
 require __DIR__ . '/../config/functions.php';
 //end

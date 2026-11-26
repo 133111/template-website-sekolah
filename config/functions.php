@@ -206,7 +206,7 @@ function register($data){
     //hash password
     $password = password_hash($pass, PASSWORD_DEFAULT);
     //insert section
-    mysqli_query($conn, "INSERT INTO superadmin (username, pass, email) VALUES('$username', '$password', '$email')");
+    mysqli_query($conn, "INSERT INTO users (username, pass, email) VALUES('$username', '$password', '$email')");
     return mysqli_affected_rows($conn); //if true = return 1 and the alert is done and true result
 
 }

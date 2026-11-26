@@ -43,7 +43,7 @@ include __DIR__ . '/../controllers/login-config.php';
 <div class="main-wrapper"> <!-- main wrapper of all -->
     <aside class="main-content-card">
         <div class="container">
-            <div class="header-text !relative !bottom-[20px]">
+            <div class="header-text !relative !bottom-[10px]">
                 <div class="foto-wrap gap-2">
                     <div class="fotoWrap-svg !h-[35px] flex justify-center items-center !w-[35px] bg-[#fef3c7] border border-[#fde68a] rounded-[12px]">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="26" fill="none" stroke="#D97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 10l10-5 10 5-10 5z"/><path d="M6 12.5v4.5c3 2.5 9 2.5 12 0v-4.5"/><circle cx="12" cy="10" r="1" fill="#D97706"/><path d="M12 10c4 0 9 2 9 6v3"/></svg>
@@ -57,7 +57,7 @@ include __DIR__ . '/../controllers/login-config.php';
                 <p style="font-family: 'Sora', 'Plus Jakarta Sans', sans-serif;" class="!text-[9px] !tracking-wide relative top-[2px]">Silahkan masukan kredensial untuk masuk ke sistem manajemen dan administrasi</p>
             </div>
     
-            <form action="" method="POST" class="!relative !bottom-[32px]">
+            <form action="" method="POST" class="!relative !bottom-[20px]">
                 <div class="input-box">
                     <label for="username">Username</label>
                     <div class="svg-apply">
@@ -154,14 +154,14 @@ include __DIR__ . '/../controllers/login-config.php';
                     </div>
                     <div class="w-[110%] h-[15%] !relative !top-[15%] gap-4 flex items-center relative right-4">
                         <div class="w-[75%] !h-full">
-                            <div class="text-1 text-start flex flex-col ">
+                            <div class="text-1 text-start flex flex-col">
                                 <p class="text-[8px] text-[#94a3b8]">Belum memiliki akun petugas?</p>
                                 <p class="text-[9px]">Hubungi Unit IT dan Administrasi Sekolah</p>
                             </div>
                         </div>
                         <div class="w-[150px] !h-[60%]">
                             <a href="https://wa.me/6287778031996?text=halo admin, saya butuh bantuan SIMS" target="_blank">
-                                <div class="text-1 !p-[4px] text-start gap-1 !bg-[#132238] cursor-pointer h-full w-full rounded-[8px] flex items-center">
+                                <div class="text-1 !p-[4px] text-start !text-[#E6B900] hover:translate-y-[-2px] duration-350 ease-in-out border border-[#ffffff26] gap-1 !bg-[#132238] cursor-pointer h-full w-full rounded-[8px] flex items-center">
                                     <div>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-headset"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 14v-3a8 8 0 1 1 16 0v3" /><path d="M18 19c0 1.657 -2.686 3 -6 3" /><path d="M4 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3" /><path d="M15 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3" /></svg>
                                     </div>
