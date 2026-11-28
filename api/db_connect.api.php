@@ -1,4 +1,5 @@
 <?php
+//connect file config pdo based
 if(session_status() === PHP_SESSION_NONE){
     session_start();
 }

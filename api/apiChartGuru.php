@@ -1,9 +1,12 @@
 <?php
+//not used rn, chartApi for->index manajemen guru
 //check session
 if(session_status() === PHP_SESSION_NONE){
     session_start();
 }
 header("Content-Type: application/json");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Method: GET");
     // main data
     $dataDummy = [ // temporer
         "create" => 19,

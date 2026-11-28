@@ -3,6 +3,8 @@ if(session_status() === PHP_SESSION_NONE){
     session_start();
 }
 header("Content-Type: application/json");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Method: GET");
 //api configure set init
 //session data get
 try{
