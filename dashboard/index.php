@@ -96,13 +96,13 @@ include_once __DIR__ . '/../dashboard/routes.php'; //routing path
                 </div>
                 <div id="content-menu" class="content-menu">
                     <div class="anchor">
-                        <a href="guru" style="font-size:13px ;">
+                        <a href="pegawai" style="font-size:13px ;">
                             <div class="main-anchor-menu" style="display:flex; gap:4%;">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6" width="20">
                                     <path d="M3.375 3C2.339 3 1.5 3.84 1.5 4.875v.75c0 1.036.84 1.875 1.875 1.875h17.25c1.035 0 1.875-.84 1.875-1.875v-.75C22.5 3.839 21.66 3 20.625 3H3.375Z" />
                                     <path fill-rule="evenodd" d="m3.087 9 .54 9.176A3 3 0 0 0 6.62 21h10.757a3 3 0 0 0 2.995-2.824L20.913 9H3.087Zm6.163 3.75A.75.75 0 0 1 10 12h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
                                 </svg>
-                                <p style="display:flex;  align-items:center;">Manajemen Guru</p>
+                                <p style="display:flex;  align-items:center;">Manajemen Pegawai</p>
                             </div>
                         </a>
                     </div>
@@ -313,7 +313,7 @@ include_once __DIR__ . '/../dashboard/routes.php'; //routing path
                         <div class="content-wrapper-3 overflow-hidden relative left-5 top-[1.2rem]">
                             <p class="dot-class flex items-center justify-center gap-1 relative right-6 text-[9px] text-slate-750 uppercase w-fit !h-[20px] rounded-[8px] text-center tracking-[0.8px] font-semibold" style="padding:8px;">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.3" stroke="currentColor" class="size-5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" /></svg>
-                                <?= $_SESSION["role"];?>
+                                <?php if($_SESSION["role"] === "key_admin"){echo "superadmin";};?>
                             </p>
                         </div>
                     </div>
@@ -331,7 +331,7 @@ include_once __DIR__ . '/../dashboard/routes.php'; //routing path
                             <div class="main-content-text-status h-full w-[70%]">
                                 <div class="main-content-text-status-content  h-full [w-70%]">
                                     <strong class="relative top-[5px] text-[14px] ">HAK AKSES</strong>
-                                    <p class="relative !text-[#3ec5ff] bottom-[4px] text-[11px] font-semibold">Izin Sistem </p>
+                                    <p class="relative !text-[#3ec5ff] bottom-[4px] text-[11px] font-semibold"><?php if($_SESSION["role"] === "key_admin"){echo"AKSES PENUH";}else{echo "AKSES ADMIN";}?></p>
                                 </div>
                             </div>
                         </div>
@@ -427,7 +427,7 @@ include_once __DIR__ . '/../dashboard/routes.php'; //routing path
                         </div>
                         <div class="slider-card" style="transform:translateY(120%); opacity : 0; animation: kartu1 0.4s 0.5s ease-out forwards;">
                             <div class="card-items" >
-                                <h6 class="font-semibold text-[13px] text-[#94a3b8]">TOTAL GURU</h6>
+                                <h6 class="font-semibold text-[13px] text-[#94a3b8]">TOTAL PEGAWAI</h6>
                                 <div class="card-items-img">
                                     <div class="main-text-img bg-[#f0f9ff] !border !border-[#e0f2f]">
                                         <svg class="text-[0,0,0]-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#0284c7"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" /></svg>

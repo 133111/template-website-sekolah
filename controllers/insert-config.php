@@ -3,6 +3,9 @@ date_default_timezone_set("Asia/Jakarta");
 if(session_status() === PHP_SESSION_NONE){
     session_start();
 }
+// ----------> Call config/functions Bellow<----------
+require __DIR__ . '/../config/functions.php'; //merge string
+//end
 //manajemen crud define
 $today = date("d M Y");
 if(!isset($_SESSION["tanggal_crud"])){
@@ -17,9 +20,6 @@ if(!isset($_SESSION["tanggal_crud"])){
 }
 
 
-// ----------> Call config/functions Bellow<----------
-require __DIR__ . '/../config/functions.php'; //merge string
-//end
 
 if(!isset($_SESSION["login"])){
     header("Location: login.php");

@@ -158,13 +158,13 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                 </div>
                 <div id="content-menu" class="content-menu active">
                     <div class="anchor">
-                        <a href="guru" style="font-size:13px ;" onclick="window.__sorotan='guru'">
+                        <a href="pegawai" style="font-size:13px ;" onclick="window.__sorotan='guru'">
                             <div class="main-anchor-menu" style="display:flex; gap:4%;">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6" width="20">
                                     <path d="M3.375 3C2.339 3 1.5 3.84 1.5 4.875v.75c0 1.036.84 1.875 1.875 1.875h17.25c1.035 0 1.875-.84 1.875-1.875v-.75C22.5 3.839 21.66 3 20.625 3H3.375Z" />
                                     <path fill-rule="evenodd" d="m3.087 9 .54 9.176A3 3 0 0 0 6.62 21h10.757a3 3 0 0 0 2.995-2.824L20.913 9H3.087Zm6.163 3.75A.75.75 0 0 1 10 12h4a.75.75 0 0 1 0 1.5h-4a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
                                 </svg>
-                                <p style="display:flex; align-items:center;" class="!font-['poppins', sans-serif]">Manajemen Guru</p>
+                                <p style="display:flex; align-items:center;" class="!font-['poppins', sans-serif]">Manajemen Pegawai</p>
                             </div>
                         </a>
                     </div>
@@ -277,7 +277,7 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                             <span class="relative left-1">
                                 <svg class="size-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" /></svg>
                             </span>
-                            <p class="font-medium hover:text-[#08090B] transition-all duration-300 cursor-pointer">Guru</p>
+                            <p class="font-medium hover:text-[#08090B] transition-all duration-300 cursor-pointer">Pegawai</p>
                         </div>
                     </div>
                     <div class="account-hero-header">
@@ -524,6 +524,7 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                                 <tr>
                                     <th style="width:5%; text-align:center;">NO</th>
                                     <th style="width:8%;">FOTO</th>
+                                    <th style="width:8%;">ROLE</th>
                                     <th style="width:18%;">NAMA</th>
                                     <th style="width:10%;">GENDER</th>
                                     <th style="width:10%;">PENDIDIKAN</th>
@@ -556,12 +557,13 @@ $dataAdmin = $adminRows[0] ?? ["username" => "Admin"];
                                                 <img class="w-[38px] h-[38px] rounded-full object-cover" src="<?= $imgSrc; ?>" alt="<?= htmlspecialchars($teach["nama"]); ?>">
                                             </div>
                                         </td>
-                                        <td class="font-bold text-[#08090B] text-[13.5px]"><?= htmlspecialchars($teach["nama"]); ?></td>
-                                        <td class="text-gray-700 text-[13px]"><?= htmlspecialchars($teach["jenis_kelamin"]); ?></td>
-                                        <td class="text-gray-700 text-[13px] font-medium"><?= htmlspecialchars($teach["pendidikan"]); ?></td>
-                                        <td class="text-gray-800 text-[13px] font-semibold"><?= htmlspecialchars($teach["mata_pelajaran"]); ?></td>
-                                        <td class="text-indigo-600 font-bold text-[13px]"><?= htmlspecialchars($teach["kontak"]); ?></td>
-                                        <td class="text-center text-gray-700 font-medium text-[13px]"><?= htmlspecialchars($teach["usia"]); ?> thn</td>
+                                        <td class="font-bold text-[#08090B] text-[11.5px]"><?= htmlspecialchars(strip_tags($teach["jabatan"]));?></td>
+                                        <td class="font-bold text-[#08090B] text-[13.5px]"><?= htmlspecialchars(strip_tags($teach["nama"])); ?></td>
+                                        <td class="text-gray-700 text-[13px]"><?= htmlspecialchars(strip_tags($teach["jenis_kelamin"])); ?></td>
+                                        <td class="text-gray-700 text-[13px] font-medium"><?= htmlspecialchars(strip_tags($teach["pendidikan"])); ?></td>
+                                        <td class="text-gray-800 text-[13px] font-semibold"><?= htmlspecialchars(strip_tags($teach["mata_pelajaran"])); ?></td>
+                                        <td class="text-indigo-600 font-bold text-[13px]"><?= htmlspecialchars(strip_tags($teach["kontak"])); ?></td>
+                                        <td class="text-center text-gray-700 font-medium text-[13px]"><?= htmlspecialchars(strip_tags($teach["usia"])); ?> thn</td>
                                         <td>
                                             <div class="wrapper-action justify-center">
                                                 <div class="actn-btn1 p-1.5 bg-amber-400 hover:bg-amber-500 text-black cursor-pointer">
