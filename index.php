@@ -6,6 +6,6 @@
 ?>
 <script>
     if(window.location.pathname === "/school-dashboard-template/"){
-            window.location.href = 'dashboard/siswa';
+            window.location.href = 'dashboard/login.php';
     }
 </script>

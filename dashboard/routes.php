@@ -4,6 +4,9 @@ $cleaner = explode("/", rtrim($url));
 $main_url = end($cleaner);
 //routes logic-1 -for all navigation on sidebar
 switch ($main_url){
+    case "siswa":
+        require __DIR__ . "/../dashboard/index.php";
+        exit;
     case "guru" :
         require __DIR__ . "/../dashboard/manajemen-guru/index.php";
         exit();

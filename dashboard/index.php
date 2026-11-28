@@ -1,35 +1,11 @@
 <?php 
 //helpers call
-include_once __DIR__ . '/../dashboard/routes.php'; //routing path
 require_once __DIR__ . '/../controllers/delete-config.php';
 require_once __DIR__ . '/../config/functions.php'; //helpers 
 // ----------> Call Controllers Bellow<----------
 require_once __DIR__ . '/../controllers/index-config.php';
-$conn = mysqli_connect('localhost', 'root', '', 'phpdasar');
-$result = mysqli_query($conn, "SELECT * FROM guru");
-$rows = [];
-while($row = mysqli_fetch_assoc($result)){
-    $rows [] = $row ;
-}
-$allGuruD = count($rows);
-if(isset($_SESSION["delete_status"])){
-    $resultDelete = $_SESSION["delete_status"];
-    unset($_SESSION["delete_status"]);
-}
-$createTotal = (int) $_SESSION["log_create"];
-$updateTotal = (int) $_SESSION["log_update"];
-$deleteTotal = (int) $_SESSION["log_delete"];
-$chartTotalOperations = $createTotal + $updateTotal + $deleteTotal;
-$i = (int) 1;
-$id = $_SESSION["admin_account"] ?? '0';
-    if($_SESSION["role"] === "key_admin"){
-        $dataAdmin = query("SELECT * FROM superadmin WHERE id = $id")[0];
-    }else{
-        $dataAdmin = query("SELECT * FROM users WHERE id = $id")[0];
-    }
-
+include_once __DIR__ . '/../dashboard/routes.php'; //routing path
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
